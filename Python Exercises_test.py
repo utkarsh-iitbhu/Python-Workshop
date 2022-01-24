@@ -1,4 +1,5 @@
 import numpy as np
+import Python Exercises
 funcs = [power, split, format, domainGet, findDog, countDog, lambdafunc, caught_speeding]
 debug = False
 test_cases = {
