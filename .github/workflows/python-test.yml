@@ -1,6 +1,6 @@
 name: Python_Assignment
 
-on: [pull_request, push]
+on: pull_request
 jobs:
     tests:
         name: Python_Exercises
@@ -19,4 +19,5 @@ jobs:
                 python3 -m pip install pytest wheel
                 if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi
             - name: Assignment check
-              run: chmod +x ./test.py
+              run: chmod +x ./test.py & python3 ./test.py
+
