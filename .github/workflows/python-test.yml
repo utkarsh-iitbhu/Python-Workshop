@@ -1,6 +1,6 @@
 name: Python_Assignment
 
-on: [pull_request, push]
+on: pull_request
 jobs:
     tests:
         name: Python_Exercises
