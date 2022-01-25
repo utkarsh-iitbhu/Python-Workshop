@@ -8,7 +8,7 @@ def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
-    return None
+    return (a**b)
 
 
 
@@ -34,7 +34,7 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    return The diameter of Earth is 12742 kilometers.
+    return None
 
 
 
