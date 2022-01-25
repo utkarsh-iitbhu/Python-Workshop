@@ -47,7 +47,7 @@ def indexing(lst):
     return None
 
 
-def dict(d):
+def dictionary(d):
     
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
