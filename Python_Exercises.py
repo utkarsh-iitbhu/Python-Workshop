@@ -34,7 +34,7 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    return None
+    return The diameter of Earth is 12742 kilometers.
 
 
 
