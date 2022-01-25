@@ -12,7 +12,7 @@ def power(a,b):
 
 
 
-def split(s):
+def split_str(s):
     
     # ** Split this string:**
 # 
