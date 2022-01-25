@@ -3,7 +3,7 @@ name: Assignment1
 on: pull_request
 jobs:
     tests:
-        name: week1
+        name: Python_Exercises
         runs-on: ubuntu-latest
         
         steps:
