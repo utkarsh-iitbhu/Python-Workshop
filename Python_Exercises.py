@@ -20,7 +20,7 @@ def split(s):
 #     
 # **into a list. **
 
-    return None
+    return split(" ")
 
 
 def format(planet,diameter):
