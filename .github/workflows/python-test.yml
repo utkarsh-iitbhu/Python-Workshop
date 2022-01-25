@@ -1,0 +1,22 @@
+name: Python_Assignment
+
+on: [pull_request, push]
+jobs:
+    tests:
+        name: Python_Exercises
+        runs-on: ubuntu-latest
+        
+        steps:
+            - uses: actions/checkout@v2
+            - name: Set up Python 3.x
+              uses: actions/setup-python@v2
+              with:
+                python-version: '3.6'
+                architecture: 'x64'
+            - name: Install dependencies
+              run: |
+                python3 -m pip install --upgrade pip
+                python3 -m pip install pytest wheel
+                if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi
+            - name: Assignment check
+              run: chmod +x ./test.py
