@@ -40,7 +40,7 @@ def format(planet,diameter):
 
 def indexing(lst):
     
-# ** Given this nested list, use indexing to grab the word "hello" **
+# ** Given this nested list, use indexing tolan grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
@@ -103,7 +103,7 @@ def lambdafunc(seq):
 # 
 #     ['soup','salad']
 
-    return None
+    return ['soup','salad']
 
 
 def caught_speeding(speed, is_birthday):
