@@ -8,7 +8,7 @@ def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
-    return None
+    return a**b
 
 
 
@@ -20,7 +20,7 @@ def split_str(s):
 #     
 # **into a list. **
 
-    return None
+    return s.split(" ")
 
 
 def format(planet,diameter):
@@ -47,7 +47,7 @@ def indexing(lst):
     return None
 
 
-def dict(d):
+def dictionary(d):
     
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
@@ -62,7 +62,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
 
-    return None
+    return "immutable"
 
 
 
