@@ -108,7 +108,7 @@ def lambdafunc(seq):
 
 def caught_speeding(speed, is_birthday):
     
-    # ### Final Problem
+    
 # **You are driving a little too fast, and a police officer stops you. Write a function
 #   to return one of 3 possible results: "No ticket", "Small ticket", or "Big Ticket". 
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
@@ -118,4 +118,120 @@ def caught_speeding(speed, is_birthday):
     return None
 
 
-# # Great job!
+## Numpy Exercises
+
+import numpy as np
+
+
+def create_arr_of_fives():
+    
+  #### Create an array of 10 fives
+  #### Convert your output into list 
+  #### e.g return list(arr) 
+
+  return None
+
+
+
+def even_num():
+    
+  ### Create an array of all the even integers from 10 to 50
+  ### Convert your output into list 
+  ### e.g return list(arr) 
+
+  return None
+
+
+
+def create_matrix():
+    
+  ### Create a 3x3 matrix with values ranging from 0 to 8
+  ### Convert your output into list 
+  ### e.g return (arr).tolist()
+
+  return None
+
+
+
+def linear_space():
+    
+  ### Create an array of 20 linearly spaced points between 0 and 1
+  ### Convert your output into list 
+  ### e.g return list(arr) 
+
+  return None
+
+
+
+def decimal_mat():
+    
+  ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
+  ### Convert your output into list 
+  ### e.g return (arr).tolist()
+
+  return None
+
+
+
+def slices_1():
+    
+  # This is a given array
+  arr = np.arange(1,26).reshape(5,5)
+  # array([[ 1,  2,  3,  4,  5],
+  #      [ 6,  7,  8,  9, 10],
+  #      [11, 12, 13, 14, 15],
+  #      [16, 17, 18, 19, 20],
+  #      [21, 22, 23, 24, 25]])
+
+  # Write a code to slice this given array
+  ### Convert your output into list 
+  ### e.g return (arr).tolist()
+  # array([[12, 13, 14, 15],
+  #      [17, 18, 19, 20],
+  #      [22, 23, 24, 25]])
+
+  return None
+
+
+
+def slices_2():
+    
+  # This is a given array
+  arr = np.arange(1,26).reshape(5,5)
+  # array([[ 1,  2,  3,  4,  5],
+  #      [ 6,  7,  8,  9, 10],
+  #      [11, 12, 13, 14, 15],
+  #      [16, 17, 18, 19, 20],
+  #      [21, 22, 23, 24, 25]])
+
+  # Write a code to slice this given array
+  ### Convert your output into list 
+  ### e.g return (arr).tolist()
+  # array([[ 2],
+  #      [ 7],
+  #      [12]])
+
+  return None 
+
+
+
+def slices_3():
+    
+  # This is a given array
+  arr = np.arange(1,26).reshape(5,5)
+  # array([[ 1,  2,  3,  4,  5],
+  #      [ 6,  7,  8,  9, 10],
+  #      [11, 12, 13, 14, 15],
+  #      [16, 17, 18, 19, 20],
+  #      [21, 22, 23, 24, 25]])
+
+  # Write a code to slice this given array
+  ### Convert your output into list 
+  ### e.g return (arr).tolist()
+  # array([[16, 17, 18, 19, 20],
+  #      [21, 22, 23, 24, 25]])
+    
+  return None 
+
+
+# Great job!
