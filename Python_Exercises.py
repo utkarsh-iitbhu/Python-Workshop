@@ -8,7 +8,7 @@ def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
-    return None
+    return a**b
 
 
 
@@ -37,14 +37,13 @@ def format(planet,diameter):
     return None
 
 
-
 def indexing(lst):
     
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
-    return None
+    return hello
 
 
 def dictionary(d):
@@ -62,7 +61,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
 
-    return None
+    return Imutable
 
 
 
@@ -75,7 +74,7 @@ def domainGet(email):
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
 
-    return None
+    return user@domain.com
 
 
 def findDog(st):
@@ -103,7 +102,7 @@ def lambdafunc(seq):
 # 
 #     ['soup','salad']
 
-    return None
+    return ['soup','salad']
 
 
 def caught_speeding(speed, is_birthday):
