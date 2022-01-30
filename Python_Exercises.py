@@ -8,7 +8,7 @@ def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
-    return None
+    return (a**b)
 
 
 
@@ -20,7 +20,7 @@ def split_str(s):
 #     
 # **into a list. **
 
-    return None
+    return split(" ")
 
 
 def format(planet,diameter):
@@ -44,7 +44,7 @@ def indexing(lst):
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
-    return None
+    return hello
 
 
 def dictionary(d):
@@ -54,7 +54,7 @@ def dictionary(d):
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
 
-    return None
+    return hello
 
 
 def subjective():
