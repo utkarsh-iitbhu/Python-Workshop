@@ -6,8 +6,10 @@
 def power(a, b):
     return a ** b
 
+
 def split_str(s):
     return list(s.split())
+
 
 def format(planet, diameter):
     # ** Given the variables:**
@@ -21,11 +23,13 @@ def format(planet, diameter):
     s = "the diameter of {} is {} kilometers".format(planet, diameter)
     return s
 
+
 def indexing(lst):
     # ** Given this nested list, use indexing to grab the word "hello" **
 
     # lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
     return lst[3][1][2][0]
+
 
 def dictionary(d):
     # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
@@ -37,7 +41,8 @@ def dictionary(d):
 def subjective():
     # ** What is the main difference between a tuple and a list? **
     # Tuple is immutable while list is mutable
-    return None
+    return "immutable"
+
 
 def domainGet(email):
     # ** Create a function that grabs the email website domain from a string in the form: **
@@ -95,9 +100,11 @@ def caught_speeding(speed, is_birthday):
             return("Big ticket")
     return None
 
+
 ## Numpy Exercises
 
 import numpy as np
+
 
 def create_arr_of_fives():
     #### Create an array of 10 fives
@@ -106,6 +113,8 @@ def create_arr_of_fives():
     arr = np.zeros(10)
     arr = arr+5
     return list(arr)
+
+
 
 def even_num():
     ### Create an array of all the even integers from 10 to 50
