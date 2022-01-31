@@ -4,65 +4,61 @@
 # Answer the questions or complete the tasks outlined in bold below.
 
 
+from re import L
+
+
 def power(a,b):
     
     # ** What is 7 to the power of 4?**
-    
-    return None
+    return a**b
+      
 
 
 
 def split_str(s):
     
-    # ** Split this string:**
-# 
-#     s = "Hi there Sam!"
-#     
+    # ** Split this string:** 
+    l=s.split()
 # **into a list. **
-
-    return None
-
+    return (l)    
 
 def format(planet,diameter):
     
 # ** Given the variables:**
 # 
-#     planet = "Earth"
-#     diameter = 12742
+#    planet = "Earth"
+#   diameter = 12742
 # 
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    return None
+    return ('The diameter of {p} is {d} kilometers.'.format(p=planet,d=diameter))
 
 
 
 def indexing(lst):
     
 # ** Given this nested list, use indexing to grab the word "hello" **
+#lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]  
 
-#lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-
-    return None
+  return lst[3][1][2][0]
+ 
 
 
 def dictionary(d):
-    
+#    d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
-
-# d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
-
-
-    return None
+   return d['k1'][3]['tricky'][3]['target'][3]
 
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
-# Tuple is _______
+# Tuple is immutable
 
-    return None
+    return 'immutable'
 
 
 
@@ -74,22 +70,29 @@ def domainGet(email):
 #     user@domain.com
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
+    i=email.index("@")
+    return email[i+1:]
+s="user@domain.com"
+print(domainGet(s)) 
 
-    return None
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
 
-    return None
-
+    return ("dog"in st)
 
 def countDog(st):
+    c=0
+# ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
+    l=st.split()
+    for i in range(len(l)):
+        if l[i] == "dog":
+            c+=1
+    return c
 
-# ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
 
-    return None
 
 
 
@@ -102,8 +105,8 @@ def lambdafunc(seq):
 # **should be filtered down to:**
 # 
 #     ['soup','salad']
-
-    return None
+    l=list(filter(lambda char : char[0] == 's',seq)) 
+    return l
 
 
 def caught_speeding(speed, is_birthday):
@@ -114,8 +117,18 @@ def caught_speeding(speed, is_birthday):
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
-
-    return None
+    if is_birthday:
+        speeding = speed - 5
+    else:
+        speeding = speed
+    
+    if speeding > 80:
+        return 'Big Ticket'
+    elif speeding > 60:
+        return 'Small Ticket'
+    else:
+        return 'No Ticket'
+print()        
 
 
 ## Numpy Exercises
@@ -128,8 +141,9 @@ def create_arr_of_fives():
   #### Create an array of 10 fives
   #### Convert your output into list 
   #### e.g return list(arr) 
-
-  return None
+  arr = np.ones(10)*5
+  return list(arr)
+print(create_arr_of_fives())  
 
 
 
@@ -138,8 +152,9 @@ def even_num():
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
-
-  return None
+  arr = np.arange(10,51,2)
+  return list(arr)
+print(even_num())  
 
 
 
@@ -148,8 +163,10 @@ def create_matrix():
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-
-  return None
+  arr = np.arange(9)
+  arr=arr.reshape(3,3)
+  return (arr).tolist()
+print(create_matrix())  
 
 
 
@@ -158,9 +175,9 @@ def linear_space():
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
   ### e.g return list(arr) 
-
-  return None
-
+  arr = np.linspace(0,1,20)
+  return list(arr)
+print(linear_space())  
 
 
 def decimal_mat():
@@ -168,8 +185,10 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-
-  return None
+  arr = np.arange(1,101,1).reshape(10,10)
+  return ((arr)/100).tolist()
+print(decimal_mat()) 
+ 
 
 
 
@@ -189,9 +208,10 @@ def slices_1():
   # array([[12, 13, 14, 15],
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
+  arr = arr[2:,1:]
 
-  return None
-
+  return (arr).tolist()
+print(slices_1())  
 
 
 def slices_2():
@@ -209,9 +229,13 @@ def slices_2():
   ### e.g return (arr).tolist()
   # array([[ 2],
   #      [ 7],
-  #      [12]])
+  #      [12]]
+  arr = arr[:3,1:2]
 
-  return None 
+  return (arr).tolist()
+print(slices_2())  
+
+
 
 
 
@@ -230,8 +254,11 @@ def slices_3():
   ### e.g return (arr).tolist()
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
-    
-  return None 
+  arr = arr[3:,:]
+
+  return (arr).tolist()
+print(slices_3())  
+
 
 
 # Great job!
