@@ -6,10 +6,8 @@
 def power(a, b):
     return a ** b
 
-
 def split_str(s):
     return list(s.split())
-
 
 def format(planet, diameter):
     # ** Given the variables:**
@@ -20,9 +18,8 @@ def format(planet, diameter):
     # ** Use .format() to print the following string: **
     #
     #     The diameter of Earth is 12742 kilometers.
-    s = "the diameter of {} is {} kilometers".format(planet, diameter)
+    s = "The diameter of {} is {} kilometers.".format(planet, diameter)
     return s
-
 
 def indexing(lst):
     # ** Given this nested list, use indexing to grab the word "hello" **
@@ -30,19 +27,16 @@ def indexing(lst):
     # lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
     return lst[3][1][2][0]
 
-
 def dictionary(d):
     # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
     # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
     return d["k1"][3]["tricky"][3]["target"][3]
 
-
 def subjective():
     # ** What is the main difference between a tuple and a list? **
     # Tuple is immutable while list is mutable
     return "immutable"
-
 
 def domainGet(email):
     # ** Create a function that grabs the email website domain from a string in the form: **
@@ -50,13 +44,12 @@ def domainGet(email):
     #     user@domain.com
     #
     # **So for example, passing "user@domain.com" would return: domain.com**
-    b = email.split("@")[1]
+    b = str(email.split("@")[1])
     return b
-
 
 def findDog(st):
     # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-    return st.find("dog") > -1
+    return st.lower().find("dog") > -1
 
 
 def countDog(st):
@@ -89,16 +82,16 @@ def caught_speeding(speed, is_birthday):
             return ("No ticket")
         elif 65<speed<86:
             return ("Small ticket")
-        elif speed>85:
+        else:
             return ("Big ticket")
     else:
         if speed < 61:
             return ("No ticket")
         elif 60<speed<81:
             return("Small ticket")
-        elif speed>80:
+        else:
             return("Big ticket")
-    return None
+    
 
 
 ## Numpy Exercises
