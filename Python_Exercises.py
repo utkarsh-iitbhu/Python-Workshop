@@ -123,16 +123,17 @@ def caught_speeding(speed, is_birthday):
     if speed <= 65:
       return "No Ticket"
     elif speed <=85:
-      return "Small ticket"
+      return "Small Ticket"
     else :
       return "Big Ticket"
   else :
     if speed <= 60:
       return "No Ticket"
     elif speed <=80:
-      return "Small ticket"
+      return "Small Ticket"
     else :
       return "Big Ticket"
+
 
 
 ## Numpy Exercises
@@ -145,7 +146,8 @@ def create_arr_of_fives():
   #### Create an array of 10 fives
   #### Convert your output into list 
   #### e.g return list(arr) 
-  return (np.ones(10) * 5)
+  return list((np.ones(10) * 5))
+
 
 
 def even_num():
@@ -154,19 +156,19 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return np.arange(10,51,2)
-
+  return list(np.arange(10,51,2))
 
 def create_matrix():
     
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-  arr_2d = np.zeros(3,3)
-  for i in (0,3):
-    for j in (0,3):
-      arr_2d[i][j]=3*i+j
+  arr_2d = np.zeros((3,3),int)
+  for i in range(0,3):
+    for j in range(0,3):
+      arr_2d[i][j]= (i*3) + j
   return arr_2d.tolist()
+
 
 
 
@@ -177,7 +179,7 @@ def linear_space():
   ### e.g return list(arr) 
   arr=np.linspace(0,1,20)
 
-  return arr
+  return list(arr)
 
 
 def decimal_mat():
@@ -190,9 +192,7 @@ def decimal_mat():
     for j in range(0,10):
       arr[i][j]=(i*10 + j + 1)/100
       
-  return arr
-
-
+  return arr.tolist()
 
 
 def slices_1():
@@ -213,6 +213,7 @@ def slices_1():
   #      [22, 23, 24, 25]])
   a= arr[2: , 1:]
   return a.tolist()
+
 
 
 import numpy as np
