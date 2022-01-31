@@ -22,8 +22,7 @@ def split_str(s):
 #     
 # **into a list. **
 
-  print(s.split())
-  return None
+  return s.split()
 
 
 
@@ -38,8 +37,7 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-  print("The diameter of {} is {} kilometers.".format(planet,diameter))
-  return None
+  return "The diameter of {} is {} kilometers.".format(planet,diameter)
 
 
 
@@ -50,8 +48,7 @@ def indexing(lst):
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-  print(lst[3][1][2][0])
-  return None
+  return lst[3][1][2][0]
 
 
 
@@ -61,16 +58,14 @@ def dictionary(d):
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
-  print(d["k1"][3]["tricky"][3]["target"][3])
-  return None
+  return d["k1"][3]["tricky"][3]["target"][3]
 
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
-  print("immutable")
-  return None
+  return "immutable"
 
 
 
@@ -150,7 +145,7 @@ def create_arr_of_fives():
   #### Create an array of 10 fives
   #### Convert your output into list 
   #### e.g return list(arr) 
-  return list(np.ones(10) * 5)
+  return (np.ones(10) * 5)
 
 
 def even_num():
@@ -159,7 +154,7 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return list(np.arange(10,51,2))
+  return np.arange(10,51,2)
 
 
 def create_matrix():
@@ -167,7 +162,10 @@ def create_matrix():
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-  arr_2d = np.absolute(np.random.randn(3,3)*8)
+  arr_2d = np.zeros(3,3)
+  for i in (0,3):
+    for j in (0,3):
+      arr_2d[i][j]=3*i+j
   return arr_2d.tolist()
 
 
@@ -179,7 +177,7 @@ def linear_space():
   ### e.g return list(arr) 
   arr=np.linspace(0,1,20)
 
-  return list(arr)
+  return arr
 
 
 def decimal_mat():
@@ -192,7 +190,7 @@ def decimal_mat():
     for j in range(0,10):
       arr[i][j]=(i*10 + j + 1)/100
       
-  return arr.tolist()
+  return arr
 
 
 
@@ -217,7 +215,7 @@ def slices_1():
   return a.tolist()
 
 
-
+import numpy as np
 def slices_2():
     
   # This is a given array
@@ -234,9 +232,8 @@ def slices_2():
   # array([[ 2],
   #      [ 7],
   #      [12]])
-  a = arr[:3,1]
+  a = arr[:3,1:2]
   return a.tolist()
-
 
 
 
