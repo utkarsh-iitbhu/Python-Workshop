@@ -7,6 +7,8 @@
 def power(a,b):
     
     # ** What is 7 to the power of 4?**
+    7**4
+  
     
     return None
 
@@ -19,6 +21,7 @@ def split_str(s):
 #     s = "Hi there Sam!"
 #     
 # **into a list. **
+Input: ['Hi', 'there', 'Sam']
 
     return None
 
@@ -27,12 +30,14 @@ def format(planet,diameter):
     
 # ** Given the variables:**
 # 
-#     planet = "Earth"
-#     diameter = 12742
+    planet = "Earth"
+    diameter = 12742
+    print('The diameter of : {} is: {}'.format(planet,diameter))
 # 
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
+
 
     return None
 
@@ -42,7 +47,8 @@ def indexing(lst):
     
 # ** Given this nested list, use indexing to grab the word "hello" **
 
-#lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+lst[3][1][2]
 
     return None
 
@@ -51,7 +57,7 @@ def dictionary(d):
     
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
-# d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+#d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
 
     return None
@@ -60,7 +66,8 @@ def dictionary(d):
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
-# Tuple is _______
+# Tuple is _______immutable
+      
 
     return None
 
