@@ -134,7 +134,7 @@ def decimal_mat():
     ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
     ### Convert your output into list
     ### e.g return (arr).tolist()
-    arr = np.around(np.linspace(0.01, 1, 10*10), decimals=2)
+    arr = np.around(np.linspace(0.01, 1, 10*10), decimals=2).reshape(10,10)
     return arr.tolist()
 
 def slices_1():
