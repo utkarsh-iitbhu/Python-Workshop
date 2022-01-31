@@ -18,7 +18,7 @@ def format(planet, diameter):
     # ** Use .format() to print the following string: **
     #
     #     The diameter of Earth is 12742 kilometers.
-    s = "The diameter of {} is {} kilometers.".format(planet, diameter)
+    s = "the diameter of {} is {} kilometers.".format(planet, diameter)
     return s
 
 def indexing(lst):
@@ -77,21 +77,20 @@ def caught_speeding(speed, is_birthday):
     #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big Ticket".
     #   Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all
     #   cases. **
-    if is_birthday :
-        if speed < 66:
-            return ("No ticket")
-        elif 65<speed<86:
-            return ("Small ticket")
+    if is_birthday:
+        if speed <= 65:
+            return "No Ticket"
+        elif speed <= 85:
+            return "Small Ticket"
         else:
-            return ("Big ticket")
+            return "Big Ticket"
     else:
-        if speed < 61:
-            return ("No ticket")
-        elif 60<speed<81:
-            return("Small ticket")
+        if speed <= 60:
+            return "No Ticket"
+        elif speed <= 80:
+            return "Small Ticket"
         else:
-            return("Big ticket")
-    
+            return "Big Ticket"
 
 
 ## Numpy Exercises
@@ -120,9 +119,9 @@ def create_matrix():
     ### Create a 3x3 matrix with values ranging from 0 to 8
     ### Convert your output into list
     ### e.g return (arr).tolist()
-    arr = np.arange(9)
-    arr.reshape((3,3))
-    return arr.tolist()
+
+    return np.arange(9).reshape(3, 3).tolist()
+
 
 def linear_space():
     ### Create an array of 20 linearly spaced points between 0 and 1
@@ -135,7 +134,7 @@ def decimal_mat():
     ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
     ### Convert your output into list
     ### e.g return (arr).tolist()
-    arr = np.linspace(0.01, 1, 10*10).reshape((10,10))
+    arr = np.around(np.linspace(0.01, 1, 10*10), decimals=2).reshape(10,10)
     return arr.tolist()
 
 def slices_1():
