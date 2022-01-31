@@ -1,0 +1,1 @@
+'The diameter of Earth is 12742 kilometers.'
