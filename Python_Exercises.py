@@ -83,10 +83,9 @@ def domainGet(email):
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-  lst=st.split()
-  for i in lst:
-    if(i=="dog"):
-      return "True"
+  def findDog(st):
+    return 'dog' in st.lower().split()
+      
 
 
 def countDog(st):
@@ -121,21 +120,14 @@ def caught_speeding(speed, is_birthday):
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
-    if is_birthday==1:
-      if speed<=65:
-        ticket="No ticket"
-      elif speed>65 and speed<86:
-        ticket="Small ticket"
-      else:
-        ticket="Big ticket"
+    if is_birthday :
+      speed=speed-5
+    if speed<61:
+      ticket="No ticket"
+    elif speed<81:
+      ticket="Small ticket"
     else:
-      if speed<=60:
-        ticket="No ticket"
-      elif speed>60 and speed<81:
-        ticket="Small ticket"
-      else:
-        ticket="Big ticket"
-
+      ticket="Big ticket"
     return ticket
 
 
@@ -189,13 +181,8 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-  arr=np.arange(1,101)
-  arr2=np.reshape(10,10)
-  lst=arr2.tolist()
-  for i in range(0,10):
-    for j in range(0,10):
-      lst[i][j]=lst[i][j]/100
-  return (lst)
+  ar=np.arange(0.01,1.01,0.01).reshape(10,10)
+  return ar.tolist()
 
 
 
@@ -237,7 +224,7 @@ def slices_2():
   #      [ 7],
   #      [12]])
 
-  return arr[:3,1:2].tolist()
+  return arr[0:3,1:2].tolist()
 
 
 
