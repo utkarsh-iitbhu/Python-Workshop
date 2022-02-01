@@ -7,8 +7,8 @@
 def power(a,b):
     
     # ** What is 7 to the power of 4?**
-    print(a**b)
-    return None
+    
+    return a**b
 
 
 
@@ -20,8 +20,8 @@ def split_str(s):
 #     s = "Hi there Sam!"
 #     
 # **into a list. **
-    print(lst)
-    return None
+    
+    return lst
 
 
 def format(planet,diameter):
@@ -35,8 +35,8 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    print("The diameter of {} is {} kilometers.".format(planet, diameter))
-    return None
+    s= "The diameter of {} is {} kilometers.".format(planet, diameter)
+    return s
 
 
 
@@ -45,9 +45,8 @@ def indexing(lst):
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-    print(lst[3][1][2][0])
 
-    return None
+    return lst[3][1][2][0]
 
 
 def dictionary(d):
@@ -56,16 +55,16 @@ def dictionary(d):
 
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
-    print(d['k1'][3]['tricky'][3]['target'][3])
-    return None
+
+    return d['k1'][3]['tricky'][3]['target'][3]
 
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
-    print("immutable")
-    return None
+    s="immutable"
+    return s
 
 
 
@@ -77,27 +76,27 @@ def domainGet(email):
 #     user@domain.com
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
-    print(email.split('@')[-1])
-    return None
+
+    return email[email.index('@')+1 : ]
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-  if 'dog' in st:
-    print("True")
-  return None
+  lst=st.split()
+  for i in lst:
+    if(i=="dog"):
+      return "True"
 
 
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
   a=0
-  for item in st.split():
-    if item=='dog':
-      a+=1
-  print(a)
-  return None
+  for i in st.split():
+    if i=='dog':
+      a=a+1
+  return a
 
 
 
@@ -110,8 +109,8 @@ def lambdafunc(seq):
 # **should be filtered down to:**
 # 
 #     ['soup','salad']
-    print(list(filter(lambda word: word[0]=='s', seq)))
-    return None
+
+    return list(filter(lambda word: word[0]=='s', seq))
 
 
 def caught_speeding(speed, is_birthday):
@@ -136,8 +135,8 @@ def caught_speeding(speed, is_birthday):
         ticket="Small ticket"
       else:
         ticket="Big ticket"
-    print(ticket)
-    return None
+
+    return ticket
 
 
 ## Numpy Exercises
@@ -151,8 +150,7 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr) 
   ar=np.ones(10)*5
-  print(list(ar))
-  return None
+  return list(ar)
 
 
 
@@ -162,8 +160,7 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
   ar=np.arange(10,51,2)
-  print(list(ar))
-  return None
+  return list(ar)
 
 
 
@@ -173,8 +170,7 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   ar=np.arange(0,9).reshape(3,3)
-  print(ar.tolist())
-  return None
+  return ar.tolist()
 
 
 
@@ -184,8 +180,7 @@ def linear_space():
   ### Convert your output into list 
   ### e.g return list(arr) 
   ar=np.linspace(0,1,20)
-  print(list(ar))
-  return None
+  return list(ar)
 
 
 
@@ -194,9 +189,13 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-  ar=np.linspace(0.01,1,100).reshape(10,10)
-  print(ar.tolist())
-  return None
+  arr=np.arange(1,101)
+  arr2=np.reshape(10,10)
+  lst=arr2.tolist()
+  for i in range(0,10):
+    for j in range(0,10):
+      lst[i][j]=lst[i][j]/100
+  return (lst)
 
 
 
@@ -216,8 +215,8 @@ def slices_1():
   # array([[12, 13, 14, 15],
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
-  print(arr[2: , 1:].tolist())
-  return None
+  ar=arr[2: , 1:]
+  return ar.tolist()
 
 
 
@@ -237,8 +236,9 @@ def slices_2():
   # array([[ 2],
   #      [ 7],
   #      [12]])
-  print(arr[:3,1:2].tolist())
-  return None
+
+  return arr[:3,1:2].tolist()
+
 
 
 def slices_3():
@@ -256,8 +256,8 @@ def slices_3():
   ### e.g return (arr).tolist()
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
-  print(arr[3:,:].tolist())
-  return None
+    
+  return arr[3:,:].tolist()
 
 
 # Great job!
