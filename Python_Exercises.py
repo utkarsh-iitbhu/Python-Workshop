@@ -150,7 +150,7 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   arr=np.arange(0,9)
-  return arr.reshape(3,3)
+  return arr.reshape(3,3).tolist()
 
 # create_matrix()
 #-------------------------------------------------------
