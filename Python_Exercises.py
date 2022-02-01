@@ -12,8 +12,8 @@ power(7,4)
 def split_str(s):
   return s.split(" ")
 
-s= "Hi there Sam!"
-split_str(s)
+# s= "Hi there Sam!"
+# split_str(s)
 #----------------------------------------------
 
 def format(planet,diameter):
@@ -31,8 +31,8 @@ def indexing(lst):
 # ** Given this nested list, use indexing to grab the word "hello" **
   return lst[3][1][2][0]
 
-lst = [1,2,[3,4],[5,[100,200,["hello"]],23,11],1,7]
-indexing(lst)
+# lst = [1,2,[3,4],[5,[100,200,["hello"]],23,11],1,7]
+# indexing(lst)
 #-------------------------------------------------
 
 def dictionary(d):  
@@ -48,7 +48,7 @@ def subjective():
 # Tuple is immutable while lists are mutable.
   return "immutable"
 
-subjective()
+# subjective()
 #-------------------------------------------------
 
 def domainGet(email):   
@@ -57,8 +57,8 @@ def domainGet(email):
 # **So for example, passing "user@domain.com" would return: domain.com**
   return email.split("@")[1]
 
-email=input("Enter your email: ")
-domainGet(email)
+# email=input("Enter your email: ")
+# domainGet(email)
 #--------------------------------------------------
 
 def findDog(st):
@@ -66,8 +66,8 @@ def findDog(st):
   val="dog" in st
   return val
 
-str=input("Enter the string: ")
-findDog(str)
+# str=input("Enter the string: ")
+# findDog(str)
 #--------------------------------------------------------
 
 def countDog(st):
@@ -77,11 +77,11 @@ def countDog(st):
   for i in l:
     if i=="dog":
       count=count+1
-      
+
   return count
 
-str=input("Enter the string: ")
-countDog(str)
+# str=input("Enter the string: ")
+# countDog(str)
 #------------------------------------------------------------
 
 def lambdafunc(seq):
@@ -91,8 +91,8 @@ def lambdafunc(seq):
 
   return list(filter(lambda i:i[0]=="s",seq))
 
-seq = ['soup','dog','salad','cat','great']
-lambdafunc(seq)
+# seq = ['soup','dog','salad','cat','great']
+# lambdafunc(seq)
 #------------------------------------------------
 
 def caught_speeding(speed, is_birthday): 
@@ -121,7 +121,7 @@ def caught_speeding(speed, is_birthday):
 
   return None
 
-caught_speeding(75,False)
+# caught_speeding(75,False)
 #------------------------------------------------------
 
 #===================================== Numpy Exercises ======================================
@@ -141,7 +141,7 @@ def even_num():
   return list(np.arange(10,51,2))
   # return list(np.linspace(10,50,21))#****************alternate method*****************
 
-even_num()
+# even_num()
 #-------------------------------------------------------
 
 def create_matrix():
@@ -151,7 +151,7 @@ def create_matrix():
   arr=np.arange(0,9)
   return arr.reshape(3,3)
 
-create_matrix()
+# create_matrix()
 #-------------------------------------------------------
 
 def linear_space():  
@@ -159,7 +159,7 @@ def linear_space():
   ### Convert your output into list 
   ### e.g return list(arr) 
   return list(np.linspace(0,1,20))
-linear_space()
+# linear_space()
 #-------------------------------------------------------------
 
 def decimal_mat():
@@ -167,7 +167,8 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   return np.arange(0.01,1.01,0.01).reshape(10,10).tolist()
-decimal_mat()
+
+# decimal_mat()
 #----------------------------------------------------
 
 def slices_1():  
