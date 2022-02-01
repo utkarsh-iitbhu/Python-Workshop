@@ -185,6 +185,8 @@ def create_matrix():
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
+ arr = np.arange(0,9).reshape(3,3)
+   return (arr).tolist()
 
   return None
 
@@ -195,6 +197,8 @@ def linear_space():
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
   ### e.g return list(arr) 
+   arr = np.linspace(0,1,20)
+   return list(arr)
 
   return None
 
@@ -205,6 +209,8 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
+   arr = np.linspace(0.01,1,100).reshape(10,10)
+     return (arr).tolist()
 
   return None
 
@@ -226,7 +232,9 @@ def slices_1():
   # array([[12, 13, 14, 15],
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
-
+   
+    brr = arr[2: , 1:]
+  return (brr).tolist()
   return None
 
 
@@ -247,6 +255,9 @@ def slices_2():
   # array([[ 2],
   #      [ 7],
   #      [12]])
+ brr = arr[:3 , 1]
+  return (brr).tolist() 
+
 
   return None 
 
@@ -267,6 +278,8 @@ def slices_3():
   ### e.g return (arr).tolist()
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
+    brr = arr[3:]  
+  return (brr).tolist() 
     
   return None 
 
