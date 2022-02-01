@@ -8,6 +8,7 @@ def power(a,b):
     
     # ** What is 7 to the power of 4?**
     7**4
+    # 7 to the power 4 is 2401
   
     
     return None
@@ -160,6 +161,8 @@ def create_arr_of_fives():
   #### Create an array of 10 fives
   #### Convert your output into list 
   #### e.g return list(arr) 
+  arr = np.ones(10)*5
+  return list(arr)
 
   return None
 
@@ -170,6 +173,8 @@ def even_num():
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
+ arr = np.arange(10,51,2)
+  return list(arr)
 
   return None
 
