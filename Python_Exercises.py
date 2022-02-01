@@ -171,7 +171,7 @@ def decimal_mat():
 # decimal_mat()
 #----------------------------------------------------
 
-def slices_1():  
+def slices_1(arr):  
   # This is a given array
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
@@ -191,7 +191,7 @@ arr = np.arange(1,26).reshape(5,5)
 slices_1(arr)
 #---------------------------------------------------------
 
-def slices_2(): 
+def slices_2(arr): 
   # This is a given array
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
@@ -211,7 +211,7 @@ arr = np.arange(1,26).reshape(5,5)
 slices_2(arr)
 #-----------------------------------------------------------
 
-def slices_3():
+def slices_3(arr):
   # This is a given array
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
