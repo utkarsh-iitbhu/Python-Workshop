@@ -77,6 +77,7 @@ def countDog(st):
   for i in l:
     if i=="dog":
       count=count+1
+      
   return count
 
 str=input("Enter the string: ")
