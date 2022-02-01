@@ -167,7 +167,7 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-  return np.arange(0.01,1.01,0.01).reshape(10,10).tolist()
+  return np.arange(0.01,1.01,0.01).reshape(10,10)
 
 # decimal_mat()
 #----------------------------------------------------
