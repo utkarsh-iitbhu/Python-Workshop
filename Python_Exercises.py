@@ -12,8 +12,6 @@ power(7,4)
 def split_str(s):
   return s.split(" ")
 
-# s= "Hi there Sam!"
-# split_str(s)
 #----------------------------------------------
 
 def format(planet,diameter):
@@ -22,17 +20,12 @@ def format(planet,diameter):
   var="The diameter of {planet} is {dia} kilometers.".format(planet=planet,dia=diameter)
   return var
 
-# planet = "Earth"
-# diameter = 12742
-# format(planet,diameter)
 #-----------------------------------------------
 
 def indexing(lst):  
 # ** Given this nested list, use indexing to grab the word "hello" **
   return lst[3][1][2][0]
 
-# lst = [1,2,[3,4],[5,[100,200,["hello"]],23,11],1,7]
-# indexing(lst)
 #-------------------------------------------------
 
 def dictionary(d):  
@@ -40,7 +33,6 @@ def dictionary(d):
   d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
   return d["k1"][3]["tricky"][3]["target"][3]
 
-# dictionary(d)
 #----------------------------------------------
 
 def subjective():  
@@ -48,7 +40,6 @@ def subjective():
 # Tuple is immutable while lists are mutable.
   return "immutable"
 
-# subjective()
 #-------------------------------------------------
 
 def domainGet(email):   
@@ -57,8 +48,6 @@ def domainGet(email):
 # **So for example, passing "user@domain.com" would return: domain.com**
   return email.split("@")[1]
 
-# email=input("Enter your email: ")
-# domainGet(email)
 #--------------------------------------------------
 
 def findDog(st):
@@ -66,8 +55,6 @@ def findDog(st):
   val="dog" in st
   return val
 
-# str=input("Enter the string: ")
-# findDog(str)
 #--------------------------------------------------------
 
 def countDog(st):
@@ -79,9 +66,6 @@ def countDog(st):
       count=count+1
 
   return count
-
-# str=input("Enter the string: ")
-# countDog(str)
 #------------------------------------------------------------
 
 def lambdafunc(seq):
@@ -90,9 +74,6 @@ def lambdafunc(seq):
 #     ['soup','salad']
 
   return list(filter(lambda i:i[0]=="s",seq))
-
-# seq = ['soup','dog','salad','cat','great']
-# lambdafunc(seq)
 #------------------------------------------------
 
 def caught_speeding(speed, is_birthday): 
@@ -121,8 +102,6 @@ def caught_speeding(speed, is_birthday):
       val="Big Ticket"
 
   return val
-
-# caught_speeding(75,False)
 #------------------------------------------------------
 
 #===================================== Numpy Exercises ======================================
@@ -141,8 +120,6 @@ def even_num():
   ### e.g return list(arr) 
   return list(np.arange(10,51,2))
   # return list(np.linspace(10,50,21))#****************alternate method*****************
-
-# even_num()
 #-------------------------------------------------------
 
 def create_matrix():
@@ -151,8 +128,6 @@ def create_matrix():
   ### e.g return (arr).tolist()
   arr=np.arange(0,9)
   return arr.reshape(3,3).tolist()
-
-# create_matrix()
 #-------------------------------------------------------
 
 def linear_space():  
@@ -160,7 +135,6 @@ def linear_space():
   ### Convert your output into list 
   ### e.g return list(arr) 
   return list(np.linspace(0,1,20))
-# linear_space()
 #-------------------------------------------------------------
 
 def decimal_mat():
@@ -179,8 +153,6 @@ def decimal_mat():
        [ 0.81,  0.82,  0.83,  0.84,  0.85,  0.86,  0.87,  0.88,  0.89,  0.9 ],
        [ 0.91,  0.92,  0.93,  0.94,  0.95,  0.96,  0.97,  0.98,  0.99,  1.  ]]
   return list
-
-# decimal_mat()
 #----------------------------------------------------
 
 def slices_1():  
@@ -199,8 +171,6 @@ def slices_1():
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
   return arr[2:,1:5].tolist()
-
-# slices_1(arr)
 #---------------------------------------------------------
 
 def slices_2(): 
@@ -219,8 +189,6 @@ def slices_2():
   #      [ 7],
   #      [12]])
   return arr[:3,1:2].tolist()
-
-# slices_2(arr)
 #-----------------------------------------------------------
 
 def slices_3():
@@ -238,8 +206,6 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
   return arr[3:,:].tolist()
-
-# slices_3(arr)
 
 # Great job!
 #                              ___________________________________
