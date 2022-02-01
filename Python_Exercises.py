@@ -171,8 +171,9 @@ def decimal_mat():
 # decimal_mat()
 #----------------------------------------------------
 
-def slices_1(arr):  
+def slices_1():  
   # This is a given array
+  arr = np.arange(1,26).reshape(5,5)
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -187,12 +188,12 @@ def slices_1(arr):
   #      [22, 23, 24, 25]])
   return arr[2: ,1:4].tolist()
 
-arr = np.arange(1,26).reshape(5,5)
-slices_1(arr)
+# slices_1(arr)
 #---------------------------------------------------------
 
-def slices_2(arr): 
+def slices_2(): 
   # This is a given array
+  arr = np.arange(1,26).reshape(5,5)
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -207,12 +208,12 @@ def slices_2(arr):
   #      [12]])
   return arr[:3,1:2].tolist()
 
-arr = np.arange(1,26).reshape(5,5)
-slices_2(arr)
+# slices_2(arr)
 #-----------------------------------------------------------
 
-def slices_3(arr):
+def slices_3():
   # This is a given array
+  arr = np.arange(1,26).reshape(5,5)
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -226,8 +227,7 @@ def slices_3(arr):
   #      [21, 22, 23, 24, 25]])
   return arr[3:,:].tolist()
 
-arr = np.arange(1,26).reshape(5,5)
-slices_3(arr)
+# slices_3(arr)
 
 # Great job!
 #                              ___________________________________
