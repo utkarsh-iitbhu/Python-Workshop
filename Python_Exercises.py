@@ -48,7 +48,7 @@ def indexing(lst):
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-lst[3][1][2]
+lst[3][1][2][0]
 
     return None
 
@@ -58,6 +58,7 @@ def dictionary(d):
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
 #d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+return d['k1'][3]['tricky'][3]['target'][3]
 
 
     return None
@@ -83,6 +84,8 @@ def domainGet(email):
 # **So for example, passing "user@domain.com" would return: domain.com**
 
     return None
+    str = email.rsplit("@")
+    return str[1]
 
 
 def findDog(st):
@@ -90,6 +93,11 @@ def findDog(st):
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
 
     return None
+ str=st.lower()
+    if str.count("dog") :
+      return True
+    else :
+      return None
 
 
 def countDog(st):
@@ -97,6 +105,8 @@ def countDog(st):
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
 
     return None
+  str = st.lower()
+   return str.count("dog")
 
 
 
@@ -109,18 +119,33 @@ def lambdafunc(seq):
 # **should be filtered down to:**
 # 
 #     ['soup','salad']
+ word = list(filter(lambda i : (i[0]=='s'),seq))
+    return word
 
     return None
 
 
 def caught_speeding(speed, is_birthday):
-    
-    
-# **You are driving a little too fast, and a police officer stops you. Write a function
+    # **You are driving a little too fast, and a police officer stops you. Write a function
 #   to return one of 3 possible results: "No ticket", "Small ticket", or "Big Ticket". 
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
+      if is_birthday == True :
+      if speed<=65 :
+        return "No Ticket" 
+      elif speed>65 and speed<=85 :
+        return "Small Ticket"
+      elif speed>85 :
+        return "Big Ticket"
+    else :
+      if speed<=60 :
+        return "No Ticket" 
+      elif speed>60 and speed<=80 :
+        return "Small Ticket"
+      elif speed>80 :
+        return "Big Ticket"
+  
 
     return None
 
