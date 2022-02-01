@@ -22,9 +22,9 @@ def format(planet,diameter):
   print("The diameter of {planet} is {dia} kilometers.".format(planet=planet,dia=diameter))
   return None
 
-planet = "Earth"
-diameter = 12742
-format(planet,diameter)
+# planet = "Earth"
+# diameter = 12742
+# format(planet,diameter)
 #-----------------------------------------------
 
 def indexing(lst):  
@@ -39,8 +39,8 @@ def dictionary(d):
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
   return print(d["k1"][3]["tricky"][3]["target"][3])
 
-d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
-dictionary(d)
+# d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+# dictionary(d)
 #----------------------------------------------
 
 def subjective():  
