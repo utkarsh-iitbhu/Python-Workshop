@@ -8,7 +8,7 @@ def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
-    return None
+    return a ** b
 
 
 
@@ -20,7 +20,7 @@ def split_str(s):
 #     
 # **into a list. **
 
-    return None
+    return s.split()
 
 
 def format(planet,diameter):
@@ -34,6 +34,7 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
+    print("The diameter of {var1} is {var2} kilometers.")
     return None
 
 
@@ -44,26 +45,31 @@ def indexing(lst):
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
-    return None
+    return lst[3][1][2][0]
 
 
 def dictionary(d):
     
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
-# d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+# d = {
+#       'k1': [1, 2, 3, {
+#                       'tricky': ['oh', 'man', 'inception', {'target': [1,2,3,'hello']} ]
+#                       } ]
+#     }
 
 
-    return None
+    return d["k1"][3]["tricky"][3]["target"][3]
 
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
-# Tuple is _______
+# Tuple is immutable unlike lists which are mutable, ie you cannot modify a tuple once defined
+# num = (1, 2, 3) is a tuple
+# num = [1, 2, 3] is a list
 
     return None
-
 
 
 
@@ -75,21 +81,24 @@ def domainGet(email):
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
 
-    return None
+    lst = email.split('@')
+    return lst[1]
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
 
-    return None
+    return 'dog' in st.lower()
 
 
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
 
-    return None
+    st = st.lower()
+    lst = st.split()
+    return lst.count('dog')
 
 
 
