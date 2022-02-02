@@ -215,7 +215,7 @@ print()
 
 #Solution 14:
 def create_matrix():
-    arr = np.random.randint(0,9,9)
+    arr = np.arange(9)
     narr = arr.reshape(3,3)
     lst = narr.tolist()
     return lst
@@ -243,8 +243,8 @@ print()
 # e.g return (arr).tolist()
 #Solution 16:
 def decimal_mat():
-    narr = np.linspace(0.01, 1, 100)
-    arr = narr.reshape(10, 10)
+    narr = np.arange(1, 101)
+    arr = narr.reshape(10, 10)/100
     lst = arr.tolist()
     return lst
 print(decimal_mat())
