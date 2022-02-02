@@ -38,7 +38,7 @@ print()
 
 #Solution 3:
 def format(planet,diameter):
-    toprint = "The diameter of {} is {} kilometers".format(planet, diameter)
+    toprint = "The diameter of {var1} is {var2} kilometers".format(var1 = planet, var2 = diameter)
     return toprint
 print(format("Earth", "12742"))
 
@@ -76,18 +76,8 @@ print()
 
 #Solution 6:
 def subjective():
-    tupledef = """ TUPLE
-    A tuple is an immutable datatype.
-    This means that the value of any tuple cannot be changed.
-    The functions such as append, pop, and reassigning a particular element of a tuple give an error when applied to a tuple.
-    When a tuple is created, a particular memory bit is assigned to it and all the elements in it.
-    \n """
-    listdef = """ LIST
-    A list is a mutable datatype.
-    This means that the value of any list can be changed.
-    You can append, pop, and reassigne a particular element of a list.
-    When a list is created, a particular memory bit is assigned to it and the memory location points to the memory for each element of the list.
-    \n """
+    tupledef = "immutable"
+    listdef = " mutable"
     print(tupledef)
     print(listdef)
     return tupledef, listdef
@@ -164,11 +154,7 @@ print()
 
 #Solution 11:
 def caught_speeding(speed, is_birthday):
-    if is_birthday.lower() == "y":
-        bday = True
-    else:
-        bday = False
-    if bday:
+    if is_birthday:
         if speed <= 65:
             ticket = "No Ticket"
             return ticket
@@ -231,7 +217,7 @@ print()
 
 #Solution 14:
 def create_matrix():
-    arr = np.random.randint(0,8,9)
+    arr = np.random.randint(0,9,9)
     narr = arr.reshape(3,3)
     lst = narr.tolist()
     return lst
