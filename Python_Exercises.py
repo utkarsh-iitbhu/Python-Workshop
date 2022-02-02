@@ -38,7 +38,7 @@ print()
 
 #Solution 3:
 def format(planet,diameter):
-    toprint = "The diameter of {var1} is {var2} kilometers".format(var1 = planet, var2 = diameter)
+    toprint = "The diameter of {var1} is {var2} kilometers.".format(var1 = planet, var2 = diameter)
     return toprint
 print(format("Earth", "12742"))
 
@@ -77,10 +77,8 @@ print()
 #Solution 6:
 def subjective():
     tupledef = "immutable"
-    listdef = " mutable"
     print(tupledef)
-    print(listdef)
-    return tupledef, listdef
+    return tupledef
 subjective()
 
 #Task 7:
@@ -245,7 +243,8 @@ print()
 # e.g return (arr).tolist()
 #Solution 16:
 def decimal_mat():
-    arr = np.random.rand(10, 10)
+    narr = np.linspace(0.01, 1, 100)
+    arr = narr.reshape(10, 10)
     lst = arr.tolist()
     return lst
 print(decimal_mat())
