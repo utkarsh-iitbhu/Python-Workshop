@@ -177,8 +177,8 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-  arr=np.linspace(0.01,1,100)
-  
+  arr=np.arange(1,101)
+  arr=arr/100
   return ((arr.reshape(10,10))).tolist()
 
 
