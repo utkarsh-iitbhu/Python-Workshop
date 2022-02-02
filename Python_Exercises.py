@@ -121,8 +121,6 @@ def findDog(st):
         return True
     else:
         return False
-string = "I had a pet dog. The name of my pet dog was Bruno"
-print(findDog(string))
 
 print()
 
@@ -137,7 +135,6 @@ def countDog(st):
         if i == 'dog':
             cd += 1
     return cd
-print(countDog(string))
 
 print()
 
@@ -191,9 +188,6 @@ def caught_speeding(speed, is_birthday):
         else:
             ticket = "Big Ticket"
             return ticket
-bdaycheck = input("Is it your birthday? (Enter 'y' or 'n')")
-s = int(input())
-print(caught_speeding(s, bdaycheck))
 
 print()
 
