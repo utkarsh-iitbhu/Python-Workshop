@@ -44,7 +44,7 @@ def indexing(lst):
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
-  return lst[3][2][1][0]
+  return lst[3][1][2][0]
 
 
 def dictionary(d):
@@ -241,7 +241,7 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
-  # return  (arr[3:,:]).tolist()
+  return  (arr[3:,:]).tolist()
 
 
 # Great job!
