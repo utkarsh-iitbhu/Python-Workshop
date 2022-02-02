@@ -196,9 +196,12 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
+  a = np.linspace(1,100,100)/100
+  a.resize(10,10)
 
+  return a.tolist()
 
-  return np.linspace(0.01,1,100).reshape(10,10).tolist()
+print(decimal_mat())
 
 
 
