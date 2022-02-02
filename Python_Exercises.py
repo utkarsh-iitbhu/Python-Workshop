@@ -34,7 +34,7 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    return 'The diameter of {0} is {1} kilometers'.format(planet,diameter)
+    return 'The diameter of {0} is {1} kilometers.'.format(planet,diameter)
 
 
 
@@ -109,7 +109,7 @@ def lambdafunc(seq):
 # 
 #     ['soup','salad']
 
-    return filter(lambda x: x[0] == 's', seq)
+    return list(filter(lambda x: x[0] == 's', seq))
 
 
 
@@ -128,14 +128,14 @@ def caught_speeding(speed, is_birthday):
         elif(speed <=85):
             ticket = "Small ticket"
         else:
-            ticket = "Big ticket"
+            ticket = "Big    Ticket"
     else:
         if(speed <= 60):
             ticket = "No Ticket"
         elif(speed <=80):
             ticket = "Small ticket"
         else:
-            ticket = "Big ticket"
+            ticket = "Big    Ticket"
 
     return ticket
 
@@ -177,7 +177,7 @@ def create_matrix():
   arr = np.array(range(0,9))
   arr.resize(3,3)
 
-  return list(arr)
+  return arr.tolist()
 
 
 
@@ -198,7 +198,7 @@ def decimal_mat():
   ### e.g return (arr).tolist()
 
 
-  return np.linspace(0.1,1).reshape(10,10).tolist()
+  return np.linspace(0.1,1,100).reshape(10,10).tolist()
 
 
 
