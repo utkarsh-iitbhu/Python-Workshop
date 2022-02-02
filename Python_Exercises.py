@@ -126,16 +126,16 @@ def caught_speeding(speed, is_birthday):
         if(speed <= 65):
             ticket = "No Ticket"
         elif(speed <=85):
-            ticket = "Small ticket"
+            ticket = "Small Ticket"
         else:
-            ticket = "Big    Ticket"
+            ticket = "Big Ticket"
     else:
         if(speed <= 60):
             ticket = "No Ticket"
         elif(speed <=80):
-            ticket = "Small ticket"
+            ticket = "Small Ticket"
         else:
-            ticket = "Big    Ticket"
+            ticket = "Big Ticket"
 
     return ticket
 
@@ -198,7 +198,7 @@ def decimal_mat():
   ### e.g return (arr).tolist()
 
 
-  return np.linspace(0.1,1,100).reshape(10,10).tolist()
+  return np.linspace(0.01,1,100).reshape(10,10).tolist()
 
 
 
