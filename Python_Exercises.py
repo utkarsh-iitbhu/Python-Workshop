@@ -121,7 +121,7 @@ def findDog(st):
         return True
     else:
         return False
-string = input()
+string = "I had a pet dog. The name of my pet dog was Bruno"
 print(findDog(string))
 
 print()
@@ -137,7 +137,6 @@ def countDog(st):
         if i == 'dog':
             cd += 1
     return cd
-string = input()
 print(countDog(string))
 
 print()
