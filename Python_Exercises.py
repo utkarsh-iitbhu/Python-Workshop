@@ -19,7 +19,7 @@ def split_str(s):
 #     s = "Hi there Sam!"
 #     
 # **into a list. **
-    L=list(s)
+    L=(list)(s.split(" "))
     return L
 
 
@@ -34,7 +34,7 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    return print("The Diameter of {} is {} kilometers".format(planet,diameter))
+    return print("The diameter of {} is {} kilometers".format(planet,diameter))
 
 
 
