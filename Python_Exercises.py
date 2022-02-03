@@ -38,9 +38,9 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    print("The diameter of {} is {}".format(planet,diameter))
+    
+    return "The diameter of {} is {}".format(planet,diameter)
 
-    return None
 
 
 
@@ -68,7 +68,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is Immutable
 
-    return None
+    return "Immutable"
 
 
 
