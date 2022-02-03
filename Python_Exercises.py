@@ -4,10 +4,6 @@
 # Answer the questions or complete the tasks outlined in bold below.
 
 
-from ast import For
-
-from sqlalchemy import false
-
 
 def power(a,b):
     
