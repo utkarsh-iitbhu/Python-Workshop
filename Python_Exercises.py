@@ -7,35 +7,20 @@
 def power(a,b):
     
     # ** What is 7 to the power of 4?**
-    c=b**a
-    print(c)
+   
     
-    return None
-power(4,7)
+    return a**b
 
 
 
 def split_str(s):
-   data=s.split()
-   mylist=[]
-   for i in data:
-     mylist.append(i)
-   print(mylist)
-
-split_str('Hi there Sam!')
+  return list(s.split())
 
 def format(planet,diameter):
-    
-    print("the diameter of the ",planet,"is",diameter,"kilometers")
+    return ( 'The diameter of {} is {} kilometers.' .format(planet,diameter)
 
-    return None
-
-format('Earth',12742)
-
-lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 def indexing(lst):
     return lst[3][1][2]
-indexing(lst)
 
 d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 def dictionary(d):
@@ -48,39 +33,25 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is immutable 
 
-    return None
+    return "immutable"
 
 
 
 
-email='user@domain.com'
+
 def domainGet(email):
     
-    data=email.split('@')
-    print(data[1])
+    return (email[5:])
 
-    return None
-domainGet(email)
-
-st='there is a dog near me'
 def findDog(st):
-    data=st.split()
-    for i in data:
-        if i=='dog':
-            print("True")
-    return None
-findDog(st)
+   
+    return "dog" in st.lower()
 
-st='there is a dog near me'
+
 def countDog(st):
-    count=0
-    data=st.split()
-    for i in data:
-        if i=='dog':
-            count=count+1
-    print(count)
-    return None
-countDog(st)
+
+     return len(st.lower().split("dog")) - 1
+
 
 
 seq = ['soup','dog','salad','cat','great']
@@ -95,20 +66,19 @@ lambdafunc(seq)
 def caught_speeding(speed, is_birthday):
     if is_birthday==True:
       if speed<=65:
-        print("no ticket")
+        return "no ticket"
       elif (speed>65 and speed<=85):
-        print("small ticket")
+        return "small ticket"
       elif(speed>85):
-        print("Big ticket")
+        return "Big ticket"
     else:
       if speed<=60:
-        print("no ticket")
+        return "no ticket"
       elif (speed>60 and speed<=80):
-        print("small ticket")
+        return "small ticket"
       elif(speed>80):
-        print("Big ticket")
-    return None
-caught_speeding(64,True)
+        return "Big ticket"
+    
 
 
 ## Numpy Exercises
