@@ -20,7 +20,7 @@ def format(planet,diameter):
   return ( 'The diameter of {} is {} kilometers.' .format(planet,diameter)
 
 def indexing(lst):
-  return lst[3][1][2]
+    return lst[3][1][2][0]
 
 d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 def dictionary(d):
