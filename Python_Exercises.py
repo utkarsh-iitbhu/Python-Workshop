@@ -117,7 +117,7 @@ import numpy as np
 
  
 def create_arr_of_fives():
-    array=([5,5,5,5,5,5,5,5,5,5])
+  array=([5,5,5,5,5,5,5,5,5,5])
 
   return list(array)
 create_arr_of_fives()
