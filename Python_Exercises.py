@@ -20,7 +20,7 @@ def split_str(s):
 #     
 # **into a list. **
 
-    return list(s.spllit())
+    return list(s.split())
 
 
 def format(planet,diameter):
@@ -82,14 +82,15 @@ def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
 
-    return None
+    return ("dog" in st.lower())
 
 
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
-
-    return ("dog" in st.lower())
+    
+    st=" "+st.lower()+" "
+    return len(st.split("dog"))-1
 
 
 
