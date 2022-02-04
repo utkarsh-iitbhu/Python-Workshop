@@ -7,8 +7,9 @@
 def power(a,b):
     
     # ** What is 7 to the power of 4?**
+  return  a**b
+    return 7**4
     
-    return None
 
 
 
@@ -19,8 +20,8 @@ def split_str(s):
 #     s = "Hi there Sam!"
 #     
 # **into a list. **
-
-    return None
+ return list(s.split())
+    
 
 
 def format(planet,diameter):
@@ -33,8 +34,8 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-
-    return None
+      print("The diameter of {} is {} kilometers.".format(planet,diameter) 
+    r
 
 
 
@@ -43,8 +44,8 @@ def indexing(lst):
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-
-    return None
+    lst[3][1][2][0]
+   
 
 
 def dictionary(d):
@@ -53,16 +54,16 @@ def dictionary(d):
 
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
-
+      d[k1][3][tricky][3][target][3]
     return None
 
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
-# Tuple is _______
+# Tuple is ___immutable____
 
-    return None
+   
 
 
 
@@ -74,22 +75,25 @@ def domainGet(email):
 #     user@domain.com
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
-
-    return None
+    email.split(@)[1]
+    
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-
-    return None
+    "dog" in st.lower()
+   
 
 
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
-
-    return None
+    i=0
+    for word in st.tolower().split():
+           if word == "dog"
+            i+=i
+    return i
 
 
 
@@ -102,7 +106,7 @@ def lambdafunc(seq):
 # **should be filtered down to:**
 # 
 #     ['soup','salad']
-
+    list(filter(lambda x:x[0]=="s",seq)
     return None
 
 
@@ -114,7 +118,15 @@ def caught_speeding(speed, is_birthday):
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
-
+    limit=[60,80]
+    if is_birthday:
+         limit=[65,85]
+    if speed<=limit[0]:
+         print("No Ticket")
+    elif speed<=limit[1]:
+         print("Small Ticket:)
+    else: 
+         print("Big Ticket")
     return None
 
 
@@ -128,8 +140,9 @@ def create_arr_of_fives():
   #### Create an array of 10 fives
   #### Convert your output into list 
   #### e.g return list(arr) 
-
-  return None
+    arr=([5,5,5,5,5,5,5,5,5,5])
+   return list(arr)
+  
 
 
 
@@ -138,8 +151,8 @@ def even_num():
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
-
-  return None
+  
+  return list(np.arange(10,51,2))
 
 
 
@@ -149,7 +162,7 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return None
+  return (np.arange(0,10).reshape(3,3)).tolist()
 
 
 
@@ -159,7 +172,7 @@ def linear_space():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return None
+  return list(np.linspace(0,1,20))
 
 
 
@@ -169,7 +182,7 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return None
+  return (np.linspace(0.01,1,100)).tolist()
 
 
 
@@ -190,9 +203,7 @@ def slices_1():
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
 
-  return None
-
-
+  return arr[2: ,1: ].tolist()
 
 def slices_2():
     
@@ -211,7 +222,7 @@ def slices_2():
   #      [ 7],
   #      [12]])
 
-  return None 
+  return arr[0:3;1:2].tolist()
 
 
 
@@ -231,7 +242,7 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
-  return None 
+  return arr[3: ].tolist()
 
 
 # Great job!
