@@ -3,7 +3,7 @@
 
 # Answer the questions or complete the tasks outlined in bold below.
 
-
+import numpy as np
 def power(a,b):
     
     # ** What is 7 to the power of 4?**
