@@ -44,7 +44,7 @@ def indexing(lst):
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
-    return [3][1][2][0]
+    return lst[3][1][2][0]
 
 
 def dictionary(d):
@@ -62,7 +62,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
 
-    return "1.)immutable whereas list is mutable.  2.)tuples uses less memory as compared to list"
+    return "immutable"
 
 
 
