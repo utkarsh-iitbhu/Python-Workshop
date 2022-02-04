@@ -10,7 +10,6 @@ def power(a,b):
     return a ** b
 
 
-
 def split_str(s):
     
     # ** Split this string:**
