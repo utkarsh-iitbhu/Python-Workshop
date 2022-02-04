@@ -110,8 +110,6 @@ def caught_speeding(speed, is_birthday):
     return None
 caught_speeding(64,True)
 
-    return None
-
 
 ## Numpy Exercises
 
