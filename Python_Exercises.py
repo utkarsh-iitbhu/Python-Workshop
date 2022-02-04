@@ -1,6 +1,4 @@
 
-
-
 # ## Exercises
 
 # Answer the questions or complete the tasks outlined in bold below.
@@ -9,7 +7,6 @@
 def power(a,b):
     
     # ** What is 7 to the power of 4?**
-    print(a**b)
     
     return a**b
 
@@ -22,10 +19,8 @@ def split_str(s):
 #     s = "Hi there Sam!"
 #     
 # **into a list. **
-
-  L=(list)(s.split(" "))
-  print(L)
-  return L
+    array=s.split()
+    return list(array)
 
 
 def format(planet,diameter):
@@ -38,8 +33,8 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-
-    return print("The diameter of {} is {} kilometers".format(planet,diameter))
+    result="The diameter of {} is {} kilometers.".format(planet,diameter)
+    return result
 
 
 
@@ -48,8 +43,8 @@ def indexing(lst):
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-    print(lst[3][1][2][0])
-    return lst[3][1][2][0]
+    str=lst[3][1][2][0]
+    return str
 
 
 def dictionary(d):
@@ -58,16 +53,16 @@ def dictionary(d):
 
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
-    print(d['k1'][3]['tricky'][3]['target'][3])
-    return d['k1'][3]['tricky'][3]['target'][3]
+    str=d['k1'][3]['tricky'][3]['target'][3]
+    return str
 
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
-
-    return "inmutable"
+    str='inmutable'
+    return str
 
 
 
@@ -79,41 +74,27 @@ def domainGet(email):
 #     user@domain.com
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
-    S=""
-    for i in range(0,len(email)):
-      if email[i]=="@" :
-        break
-      
-    S+=email[i+1:len(email)] 
-    print(S)
-    return S
+    str=email.split('@')[1]
+    return str
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-    if 'dog' in st :
-      print('True')
-      return True
-      
-    elif 'Dog' in st :
-      print('True')
-      return 'True'
-      
-    elif 'DOG' in st :
-      print('True')
-      return True
-      
-    else :
-      return None
+
+    
+    return 'dog' in st.lower().split()
 
 
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
-    L=st.split()
-    print(L.count("dog"))
-    return L.count("dog")
+
+    count = 0
+    for word in st.split():
+        if word == 'dog':
+            count = count + 1
+    return count
 
 
 
@@ -127,8 +108,6 @@ def lambdafunc(seq):
 # 
 #     ['soup','salad']
     result = list(filter (lambda test: test[0] == "s",seq))
-    print(result)
-    
     return result
 
 
@@ -140,30 +119,22 @@ def caught_speeding(speed, is_birthday):
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
-    if is_birthday==True:
-        if 0<=speed<=65 :
-            print("No Ticket")
-            return "No Ticket"
-        elif speed<=85 :
-            print("Small Ticket")
-            return "Small Ticket"
-        else :
-            print("Big Ticket")
-            return "Big Ticket"
-    
-    if is_birthday==False:
-        if 0<=speed<=60 :
-            print("No Ticket")
-            return "No Ticket"
-        elif speed<=80 :
-            print("Small Ticket")
-            return "Small Ticket"
-        else :
-            print("Big Ticket")
-            return "Big Ticket"
-        
 
-    
+      if is_birthday==False:
+        if speed<=60:
+            status= 'No Ticket'
+        elif speed<=80:
+            status= 'Small Ticket'
+        else:
+            status= 'Big Ticket'
+      else:
+        if speed<=65:
+            status= 'No Ticket'
+        elif speed<=85:
+            status= 'Small Ticket'
+        else:
+            status= 'Big Ticket'
+      return status
 
 
 ## Numpy Exercises
@@ -176,10 +147,9 @@ def create_arr_of_fives():
   #### Create an array of 10 fives
   #### Convert your output into list 
   #### e.g return list(arr) 
-  array=np.ones(10)*5
-  print(list(array))
-
-  return list(array)
+    array=np.ones(10)*5
+    result=list(array)
+    return result
 
 
 
@@ -189,9 +159,8 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
   array=np.arange(10,51,2)
-  print(list(array))
-
-  return list(array)
+  result=list(array)
+  return result
 
 
 
@@ -201,9 +170,8 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   array=np.arange(0,9).reshape(3,3)
-  print((array).tolist())
-
-  return (array).tolist()
+  result=(array).tolist()
+  return result
 
 
 
@@ -211,10 +179,10 @@ def linear_space():
     
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
-  ### e.g return list(arr) 
+  ### e.g return list(arr)
   array=np.linspace(0, 1, num=20)
-  print(list(array))
-  return list(array)
+  result=list(array)
+  return result
 
 
 
@@ -223,10 +191,11 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-  array=np.linspace(0.01,1,num=100).reshape(10,10)
-  print((array).tolist())
-
-  return (array).tolist()
+    arr = np.arange(1,101).reshape(10,10)
+    myInt = 100
+    newarr=arr/myInt
+    result=(newarr).tolist()
+    return result
 
 
 
@@ -246,9 +215,10 @@ def slices_1():
   # array([[12, 13, 14, 15],
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
-  print(arr[2::1,1::1].tolist())
-  
-  return arr[2::1,1::1].tolist()
+
+  z=arr[2:,1:]
+  y =(z).tolist()
+  return y
 
 
 
@@ -268,10 +238,10 @@ def slices_2():
   # array([[ 2],
   #      [ 7],
   #      [12]])
-  print(arr[0:3:1,1:2:1].tolist())
 
-  return arr[0:3:1,1:2:1].tolist() 
-
+  z=arr[:3,1:2]
+  y =(z).tolist()
+  return y
 
 
 def slices_3():
@@ -289,30 +259,10 @@ def slices_3():
   ### e.g return (arr).tolist()
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
-  print(arr[3::,::].tolist())
     
-  return arr[3::,::].tolist() 
+  z=arr[3:,:]
+  y =(z).tolist()
+  return y
 
 
 # Great job!
-
-power(7,4)
-split_str("Hi there Sam!")
-format("Earth",12742)
-indexing([1,2,[3,4],[5,[100,200,['hello']],23,11],1,7])
-dictionary({'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]})
-domainGet("aritrababan2001@gmail.com")
-findDog('dog')
-countDog('This dog runs faster than the other dog dude!')
-lambdafunc(['soup','dog','salad','cat','great'])
-caught_speeding(81,True)
-create_arr_of_fives()
-even_num()
-create_matrix()
-linear_space()
-decimal_mat()
-slices_1()
-slices_2()
-slices_3()
-
-
