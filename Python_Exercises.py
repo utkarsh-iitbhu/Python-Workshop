@@ -20,7 +20,7 @@ def split_str(s):
 #     
 # **into a list. **
 
-    return list(s)
+    return list(s.split(" "))
 
 
 def format(planet,diameter):
@@ -33,9 +33,8 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    print(f"The diameter of {planet} is {diameter} kilometers.")
-
-    return None
+    
+    return "The diameter of {a} is {b} kilometers.".format(a=planet,b=diameter)
 
 
 
@@ -62,8 +61,7 @@ def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
-    print("tuple are immutable")
-    return None
+    return 'immutable'
 
 
 
@@ -178,7 +176,7 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return np.resize((np.arange(0.01,1.01,0.01)),(10,10)).tolist()
+  return (np.arange(1,101).reshape(10,10) / 100).tolist()
 
 
 def slices_1():
