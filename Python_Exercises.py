@@ -1,4 +1,3 @@
-
 # ## Exercises
 
 # Answer the questions or complete the tasks outlined in bold below.
@@ -122,14 +121,14 @@ def caught_speeding(speed, is_birthday):
             print("No Ticket")
         elif 66<=speed<=85:
             print("Small Ticket")
-        elif speed>86:
+        elif speed>=86:
             print("Big Ticket")
     else:
         if speed<=60:
             print("No Ticket")
-        elif 61<=speed<=81:
+        elif 61<=speed<=80:
             print("Small Ticket")
-        elif speed>81:
+        elif speed>=81:
             print("Big Ticket")   
     return None
 
@@ -144,11 +143,10 @@ def create_arr_of_fives():
   #### Create an array of 10 fives
   #### Convert your output into list 
   #### e.g return list(arr) 
-
-  arr=np.zeroes(10)
-  arr=arr+5  
+  arr=np.zeros(10)
+  arr=arr+5
   return list(arr)
-
+print(create_arr_of_fives())
 
 
 def even_num():
@@ -158,7 +156,7 @@ def even_num():
   ### e.g return list(arr) 
   arr = np.range(10,51,2)
   return list(arr)  
-
+print(even_num())
 
 
 def create_matrix():
@@ -166,8 +164,10 @@ def create_matrix():
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-
-  return None
+  arr = np.arrange(9)
+  arr=arr.reshape(3,3)
+  return (arr).tolist()
+print(create_matrix)
 
 
 
@@ -176,8 +176,9 @@ def linear_space():
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
   ### e.g return list(arr) 
-
-  return None
+  arr=np.linspace(0,1,20)
+  return list(arr)
+print(linear_space())
 
 
 
@@ -187,8 +188,9 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return None
-
+  arr = np.arange(1,101,1).reshape(10,10)
+  return ((arr)/100).tolist()
+print( decimal_mat())
 
 
 def slices_1():
@@ -208,7 +210,7 @@ def slices_1():
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
 
-  return None
+  return (arr[2:,1:]).tolist()
 
 
 
@@ -229,7 +231,7 @@ def slices_2():
   #      [ 7],
   #      [12]])
 
-  return None 
+  return(arr[:3, 1:2]).tolist()
 
 
 
@@ -249,7 +251,7 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
-  return None 
+  return (arr[3:,:]).tolist()
 
 
 # Great job!
