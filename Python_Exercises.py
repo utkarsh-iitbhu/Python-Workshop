@@ -20,7 +20,7 @@ def split_str(s):
 #     
 # **into a list. **
 
-    return list(s.split())
+    return list(s)
 
 
 def format(planet,diameter):
@@ -62,7 +62,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
 
-    return str("immutable")
+    return "immutable"
 
 
 
@@ -88,9 +88,12 @@ def findDog(st):
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
-    
-    st=" "+st.lower()+" "
-    return len(st.split("dog"))-1
+    count = 0
+    for word in st.lower().split():
+        if word == 'dog':
+            count += 1
+
+    return count
 
 
 
@@ -159,7 +162,7 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return np.resize((np.arange(9)),(3,3)).tolist()
+  return np.resize((np.arange(0,9)),(3,3)).tolist()
 
 
 
