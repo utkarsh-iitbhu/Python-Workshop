@@ -22,7 +22,7 @@ def split_str(s):
     return s.split()
 
 
-def format(planet,diameter):
+def format(planet="Earth",diameter=12742):
  
     
 # ** Given the variables:**
@@ -34,7 +34,7 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    return "The diameter of {0} is {1} kilometers".format(planet,diameter)
+    return "The diameter of {p} is {x} kilometers.".format(p=planet,x=diameter)
 
 
 
@@ -63,9 +63,9 @@ def subjective():
     
     
 # ** What is the main difference between a tuple and a list? **
-# Tuple is immutable meaning its content cannot be changed while list is mutable which means it can be modified.
+# Tuple is _______ 
 
-    return "Tuple is immutable meaning its content cannot be changed while list is mutable which means it can be modified."
+    return str("immutable")
 
 
 
@@ -117,37 +117,29 @@ def lambdafunc(seq):
 
 def caught_speeding(speed, is_birthday):
     
+    
    # **You are driving a little too fast, and a police officer stops you. Write a function
 #   to return one of 3 possible results: "No ticket", "Small ticket", or "Big Ticket". 
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
     
-    if is_birthday is True:
-        if speed<=65:
-            print("No ticket")
-        elif 66<=speed<=85:
-            print("Small ticket")
-        elif speed>=86:
-            print("Big ticket")
-            
+    l = [60,81]
+    if is_birthday:
+        l = [x+5 for x in l]
+
+    print(l)
+    
+    if speed<=l[0]:
+        return "No Ticket"
+    
+    elif speed>=l[1]:
+        return "Big Ticket"
+    
     else:
-        if speed<=60:
-            print("No ticket")
-        elif 61<=speed<=85:
-            print("Small ticket")
-        elif speed>=81:
-            print("Big ticket")
-            
-    return none
+        return "Small Ticket"
     
-    
-# **You are driving a little too fast, and a police officer stops you. Write a function
-#   to return one of 3 possible results: "No ticket", "Small ticket", or "Big Ticket". 
-#   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
-#   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
-#   cases. **
-   
+
 
 
 ## Numpy Exercises
@@ -170,7 +162,7 @@ def even_num():
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
-    arr = np.range(10,51,2)
+    arr = np.arange(10,51,2)
     return list(arr) 
 
 
@@ -180,7 +172,7 @@ def create_matrix():
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-    arr = np.arrange(9)
+    arr = np.arange(9)
     arr=arr.reshape(3,3)
     return (arr).tolist()
 
@@ -198,13 +190,16 @@ def linear_space():
 
 
 def decimal_mat():
-   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
+    ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
    ### Convert your output into list 
    ### e.g return (arr).tolist()
-
-    arr = np.arrange(1,101,1).reshape(10,10)
-    return ((arr)/100).tolist()
     
+    arr = np.arange(1,101,1)
+    arr = arr/100
+    l = arr.reshape(10,10)
+
+    return l.tolist()
+   
 
 
 def slices_1():
@@ -224,7 +219,7 @@ def slices_1():
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
 
-    return arr[2:, 1:].tolist()
+  return arr[2:, 1:].tolist()
     
   
 
@@ -246,7 +241,7 @@ def slices_2():
   #      [ 7],
   #      [12]])
    
-    return(arr[:3, 1:2]).tolist()
+  return(arr[:3, 1:2]).tolist()
     
 
 
@@ -266,7 +261,7 @@ def slices_3():
   ### e.g return (arr).tolist()
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
-    return (arr[3:]).tolist()
+  return (arr[3:]).tolist()
   
 
 
