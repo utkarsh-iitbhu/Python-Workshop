@@ -25,7 +25,7 @@ def split_str(s):
 #     
 # **into a list. **
 
-    return s.splt()
+    return s.spilt()
 
 
 def format(planet,diameter):
