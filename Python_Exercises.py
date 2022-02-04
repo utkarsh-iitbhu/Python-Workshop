@@ -20,7 +20,7 @@ def split_str(s):
 #     
 # **into a list. **
 
-    return list(s)
+    return list(s.split())
 
 
 def format(planet,diameter):
@@ -152,7 +152,7 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return list(np.arrange(10,51,2))
+  return list(np.arange(10,51,2))
 
 
 
@@ -172,7 +172,7 @@ def linear_space():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return np.linespace(0,1,20).tolist()
+  return np.linspace(0,1,20).tolist()
 
 
 
@@ -182,7 +182,7 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return np.resize((np.arange(0.01,1.01,0.01)),(10,10)).tolist()
+  return (np.arange(1,101).reshape(10,10) / 100).tolist()
 
 
 
