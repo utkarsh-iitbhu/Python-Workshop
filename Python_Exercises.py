@@ -141,7 +141,7 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr) 
     arr=([5,5,5,5,5,5,5,5,5,5])
-   return list(arr)
+    return list(arr)
   
 
 
@@ -162,7 +162,7 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return (np.arange(0,10).reshape(3,3)).tolist()
+  return (np.arange(0,9).reshape(3,3)).tolist()
 
 
 
