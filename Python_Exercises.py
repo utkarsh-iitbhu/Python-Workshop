@@ -222,7 +222,7 @@ def slices_2():
   #      [ 7],
   #      [12]])
 
-  return arr[0:3;1:2].tolist()
+  return arr[0:3,1:2].tolist()
 
 
 
