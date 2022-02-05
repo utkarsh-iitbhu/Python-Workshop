@@ -20,7 +20,7 @@ def split_str(s):
 #     s = "Hi there Sam!"
 #     
 # **into a list. **
- return list(s.split())
+    return list(s.split())
     
 
 
@@ -178,7 +178,11 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return (np.linspace(0.01,1,100)).tolist()
+  arr = np.arange(1,101,1)
+  arr = arr/100
+  l = arr.reshape(10,10)
+    return l.tolist()
+
 
 
 
