@@ -89,11 +89,7 @@ def findDog(st):
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
-i=0
-for item in st.lower().split():
-    if (item=="dog"):
-         i+=1
-print(i)
+return st.count('dog')
 
 
 
