@@ -38,7 +38,7 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    print("The diameter of {} is {}".format(planet,diameter))
+    print("The diameter of {} is {} kilometers.".format(planet,diameter))
     return None
 
 
@@ -68,7 +68,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
     print("Tuple is Immutable")
 
-    return "Immutable"
+    return None
 
 
 
@@ -134,7 +134,8 @@ def caught_speeding(speed, is_birthday):
       elif speed <=80:
         print("Small Ticket")
       elif speed>80:
-        print("Big   Ticket")   
+        print("Big   Ticket") 
+      return None  
 
 
 ## Numpy Exercises
@@ -180,6 +181,7 @@ def linear_space():
   my_matrix = [ [0,5,2] , [3,2,5] , [6,7,8] ]
   arr = np.array(my_matrix)
   print(arr.tolist())
+  return None
 
 
 
@@ -189,9 +191,9 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   arr = np.linspace(0.01,1,100).reshape(10,10)
+  print(arr.tolist())
 
-  return arr.tolist()
-
+  return None
 
 
 def slices_1():
