@@ -34,7 +34,7 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    print("The diameter of {} is {} kilometers.".format(planet,diameter) 
+    return "The diameter of {} is {} kilometers.".format(planet,diameter)
 
 
 
@@ -63,7 +63,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is ___immutable____
 
-   
+   return ("immutable")
 
 
 
@@ -75,14 +75,14 @@ def domainGet(email):
 #     user@domain.com
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
-    email.split(@)[1]
+  return  email.split(@)[1]
     
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-    "dog" in st.lower()
+ return   "dog" in st.lower()
    
 
 
@@ -106,8 +106,8 @@ def lambdafunc(seq):
 # **should be filtered down to:**
 # 
 #     ['soup','salad']
-    list(filter(lambda x:x[0]=="s",seq)
-    return None
+   return list(filter(lambda x:x[0]=="s",seq))
+    
 
 
 def caught_speeding(speed, is_birthday):
@@ -122,12 +122,12 @@ def caught_speeding(speed, is_birthday):
     if is_birthday:
          limit=[65,85]
     if speed<=limit[0]:
-         print("No Ticket")
+         return "No Ticket"
     elif speed<=limit[1]:
-         print("Small Ticket:)
+         return "Small Ticket"
     else: 
-         print("Big Ticket")
-    return None
+         return "Big Ticket"
+   
 
 
 ## Numpy Exercises
