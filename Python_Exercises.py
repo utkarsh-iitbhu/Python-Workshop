@@ -84,14 +84,19 @@ def domainGet(email):
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
 
-    return None
+    return email.split('@')[1]
+
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-
-    return None
+   if 'dog' in st:
+     print("True")
+   else:
+       print("False")
+   return None
+findDog("no dog here")
 
 
 def countDog(st):
@@ -114,7 +119,7 @@ def lambdafunc(seq):
 
     return None
 seq = ['soup','dog','salad','cat','great']
-list(filter(lambda x: x.startswith('s'), seq))
+list(filter(lambda item: item.startswith('s'), seq))
 
 def caught_speeding(speed, is_birthday):
     
@@ -138,7 +143,7 @@ def caught_speeding(speed, is_birthday):
       print("No Ticket")
     elif speed>65 and speed<=85:
       print("Small Ticket")
-    elif speed>85:
+    else:
       print("Big Ticket")
 
 ## Numpy Exercises
@@ -152,6 +157,10 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr) 
 
+a= np.random.randint(5,6,10)
+a
+a.tolist()
+
   return None
 
 
@@ -161,6 +170,9 @@ def even_num():
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
+a= np.arange(10,51,2)
+a
+a.tolist()
 
   return None
 
@@ -171,6 +183,9 @@ def create_matrix():
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
+a= np.random.randint(0,8,[3,3])
+a
+a.tolist()
 
   return None
 
@@ -181,6 +196,9 @@ def linear_space():
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
   ### e.g return list(arr) 
+arr= np.linspace(0,1,20)
+arr
+arr.tolist()
 
   return None
 
@@ -191,6 +209,7 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
+
 
   return None
 
@@ -212,6 +231,8 @@ def slices_1():
   # array([[12, 13, 14, 15],
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
+a= arr[2: ,1: ]
+a.tolist()
 
   return None
 
@@ -233,7 +254,8 @@ def slices_2():
   # array([[ 2],
   #      [ 7],
   #      [12]])
-
+a= arr[0:3,1:2]
+a.tolist()
   return None 
 
 
@@ -254,6 +276,8 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
+ a= arr[3: , 0:] 
+ a.tolist()
   return None 
 
 
