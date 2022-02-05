@@ -8,7 +8,7 @@ def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
-    return None
+    return a**b
 
 
 
@@ -20,10 +20,10 @@ def split_str(s):
 #     
 # **into a list. **
 
-    return None
+    return s.split()
 
 
-def format(planet,diameter):
+def format(planet= "Earth",diameter= 12742):
     
 # ** Given the variables:**
 # 
@@ -34,7 +34,7 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    return None
+    return "The diameter of {p} is {x} kilometers.".format(p=planet,x=diameter)
 
 
 
@@ -44,7 +44,7 @@ def indexing(lst):
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
-    return None
+    return lst[3][1][2][0]
 
 
 def dictionary(d):
@@ -54,7 +54,7 @@ def dictionary(d):
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
 
-    return None
+    return d['k1'][3]['tricky'][3]['target'][3]
 
 
 def subjective():
@@ -75,21 +75,21 @@ def domainGet(email):
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
 
-    return None
+    return str("immutable")
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
 
-    return None
+    return 'dog' in st.lower()
 
 
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
 
-    return None
+    return st.count('dog')
 
 
 
@@ -103,7 +103,7 @@ def lambdafunc(seq):
 # 
 #     ['soup','salad']
 
-    return None
+    return list(filter(lambda s: s[0].lower()=='s', seq))
 
 
 def caught_speeding(speed, is_birthday):
@@ -115,7 +115,18 @@ def caught_speeding(speed, is_birthday):
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
 
-    return None
+     l = [60,81]
+    if is_birthday:
+        l = [x+5 for x in l]
+
+    print(l)
+    if speed<=l[0]:
+        return 'No Ticket'
+    elif speed>=l[1]:
+        return 'Big Ticket'
+    else:
+        return 'Small Ticket'
+
 
 
 ## Numpy Exercises
@@ -129,7 +140,11 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr) 
 
-  return None
+  #### e.g return list(arr)  
+  l = np.zeros(10)
+  l[:]=5
+  return list(l)
+
 
 
 
@@ -139,7 +154,8 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return None
+  l = np.arange(10,51,2)
+  return list(l)
 
 
 
@@ -149,7 +165,11 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return None
+   arr = np.arange(9)
+  l = arr.reshape(3,3)
+
+  return l.tolist()
+
 
 
 
@@ -159,7 +179,11 @@ def linear_space():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return None
+   arr = np.arange(9)
+  l = arr.reshape(3,3)
+
+  return l.tolist()
+
 
 
 
@@ -169,7 +193,11 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return None
+   arr = np.arange(1,101,1)
+  arr = arr/100
+  l = arr.reshape(10,10)
+
+  return l.tolist()
 
 
 
@@ -184,13 +212,14 @@ def slices_1():
   #      [21, 22, 23, 24, 25]])
 
   # Write a code to slice this given array
+     l = np.array([x[1:] for x in arr[2:]])
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   # array([[12, 13, 14, 15],
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
 
-  return None
+  return l.tolist()
 
 
 
@@ -205,13 +234,14 @@ def slices_2():
   #      [21, 22, 23, 24, 25]])
 
   # Write a code to slice this given array
+    l = np.array([x[1:2] for x in arr[:3]])
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   # array([[ 2],
   #      [ 7],
   #      [12]])
 
-  return None 
+  return l.tolist()
 
 
 
@@ -226,12 +256,13 @@ def slices_3():
   #      [21, 22, 23, 24, 25]])
 
   # Write a code to slice this given array
+     l = arr[3:]
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
-  return None 
+  return l.tolist() 
 
 
 # Great job!
