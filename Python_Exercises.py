@@ -62,7 +62,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
 
-    return None
+    return str("immutable")
 
 
 
@@ -75,7 +75,7 @@ def domainGet(email):
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
 
-    return str("immutable")
+    return email.split('@')[-1]
 
 
 def findDog(st):
