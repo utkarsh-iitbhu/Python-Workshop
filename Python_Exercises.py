@@ -140,7 +140,7 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr) 
 
-  #### e.g return list(arr)  
+  
   l = np.zeros(10)
   l[:]=5
   return list(l)
@@ -178,12 +178,8 @@ def linear_space():
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
   ### e.g return list(arr) 
-
-   arr = np.arange(9)
-  l = arr.reshape(3,3)
-
-  return l.tolist()
-
+  l = np.linspace(0,1,20)
+  return list(l)
 
 
 
