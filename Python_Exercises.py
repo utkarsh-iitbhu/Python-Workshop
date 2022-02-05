@@ -28,7 +28,7 @@ def split_str(s):
     return s.split()
 
 
-def format(planet,diameter):
+def format(planet= "Earth",diameter= 12742):
     
 # ** Given the variables:**
 # 
@@ -38,8 +38,8 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    print("The diameter of {} is {} kilometers.".format(planet,diameter))
-    return None
+    return "The diameter of {p} is {x} kilometers.".format(p=planet,x=diameter)
+
 
 
 
@@ -66,9 +66,8 @@ def dictionary(d):
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
-    print("Tuple is Immutable")
-
-    return None
+# Tuple is _______
+    return str("immutable")
 
 
 
@@ -120,22 +119,16 @@ def caught_speeding(speed, is_birthday):
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
-
-    if is_birthday == True:
-      if speed<=65:
-        print("No ticket")
-      elif speed <=85:
-        print("Small Ticket")
-      elif speed>85:
-        print("Big   Ticket")    
-    elif is_birthday == False:
-      if speed<=60:
-        print("No ticket")
-      elif speed <=80:
-        print("Small Ticket")
-      elif speed>80:
-        print("Big   Ticket") 
-      return None  
+     l = [60,81]
+    if is_birthday:
+        l = [x+5 for x in l]
+    print(l)
+    if speed<=l[0]:
+        return 'No Ticket'
+    elif speed>=l[1]:
+        return 'Big Ticket'
+    else:
+        return 'Small Ticket'
 
 
 ## Numpy Exercises
@@ -168,8 +161,9 @@ def create_matrix():
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-  arr = np.array([np.random.randint(0,9,3),np.random.randint(0,9,3),np.random.randint(0,9,3)])
-  return (arr).tolist()
+  arr = np.arange(9)
+  l = arr.reshape(3,3)
+  return l.tolist()
 
 
 
@@ -178,11 +172,8 @@ def linear_space():
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
   ### e.g return list(arr) 
-  my_matrix = [ [0,5,2] , [3,2,5] , [6,7,8] ]
-  arr = np.array(my_matrix)
-  print(arr.tolist())
-  return None
-
+  l = np.linspace(0,1,20)
+  return list(l)
 
 
 def decimal_mat():
@@ -190,10 +181,11 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-  arr = np.linspace(0.01,1,100).reshape(10,10)
-  print(arr.tolist())
+  arr = np.arange(1,101,1)
+  arr = arr/100
+  l = arr.reshape(10,10)
+  return l.tolist()
 
-  return None
 
 
 def slices_1():
