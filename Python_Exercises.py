@@ -38,8 +38,8 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    
-    return "The diameter of {} is {}".format(planet,diameter)
+    print("The diameter of {} is {}".format(planet,diameter))
+    return None
 
 
 
@@ -66,7 +66,7 @@ def dictionary(d):
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
-# Tuple is Immutable
+    print("Tuple is Immutable")
 
     return "Immutable"
 
@@ -123,18 +123,18 @@ def caught_speeding(speed, is_birthday):
 
     if is_birthday == True:
       if speed<=65:
-        "No ticket"
+        print("No ticket")
       elif speed <=85:
-        "Small Ticket"
+        print("Small Ticket")
       elif speed>85:
-        "Big   Ticket"    
+        print("Big   Ticket")    
     elif is_birthday == False:
       if speed<=60:
-        "No ticket"
+        print("No ticket")
       elif speed <=80:
-        "Small Ticket"
+        print("Small Ticket")
       elif speed>80:
-        "Big   Ticket"   
+        print("Big   Ticket")   
 
 
 ## Numpy Exercises
@@ -168,7 +168,7 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   arr = np.array([np.random.randint(0,9,3),np.random.randint(0,9,3),np.random.randint(0,9,3)])
-  return arr.tolist()
+  return (arr).tolist()
 
 
 
@@ -177,8 +177,9 @@ def linear_space():
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
   ### e.g return list(arr) 
-  arr = np.linspace(0,1,20)
-  return list(arr)
+  my_matrix = [ [0,5,2] , [3,2,5] , [6,7,8] ]
+  arr = np.array(my_matrix)
+  print(arr.tolist())
 
 
 
@@ -210,7 +211,7 @@ def slices_1():
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
 
-  return arr[2:,1:]
+  return arr[2:,1:].tolist()
 
 
 
