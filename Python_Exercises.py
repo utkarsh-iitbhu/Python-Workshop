@@ -75,7 +75,7 @@ def domainGet(email):
 #     user@domain.com
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
-  return  email.split(@)[1]
+  return  email.split(@)[-1]
     
 
 
