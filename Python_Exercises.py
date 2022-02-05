@@ -181,7 +181,7 @@ def decimal_mat():
   arr = np.arange(1,101,1)
   arr = arr/100
   l = arr.reshape(10,10)
-    return l.tolist()
+  return l.tolist()
 
 
 
