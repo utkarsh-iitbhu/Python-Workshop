@@ -163,7 +163,7 @@ def linear_space():
     # Convert your output into list
     # e.g return list(arr)
 
-    return None
+    return list(np.linspace(0, 1, 20))
 
 
 def decimal_mat():
