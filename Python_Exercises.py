@@ -216,7 +216,7 @@ def slices_1():
   #      [22, 23, 24, 25]])
 
 
-    return arr[2: , 1: ].tolist()
+  return arr[2: , 1: ].tolist()
 
 
 
