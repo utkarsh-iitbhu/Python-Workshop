@@ -4,7 +4,7 @@
 # Answer the questions or complete the tasks outlined in bold below.
 
 
-def power(a,b):
+    def power(a,b):
     
     
     # ** What is 7 to the power of 4?**
@@ -15,7 +15,7 @@ def power(a,b):
 
 
 
-def split_str(s):
+    def split_str(s):
     
     # ** Split this string:**
     
@@ -28,7 +28,7 @@ def split_str(s):
 
 
 
-def format(planet,diameter):
+    def format(planet,diameter):
     print('The diameter of {} is {} kilometers.'.format(planet,diameter))
     
 # ** Given the variables:**
@@ -45,8 +45,7 @@ def format(planet,diameter):
 
 
 
-
-def indexing(lst):
+    def indexing(lst):
     
     
 # ** Given this nested list, use indexing to grab the word "hello" **
@@ -67,7 +66,7 @@ def dictionary(d):
 
 
 
-def subjective():
+    def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is ___immutable____
@@ -77,7 +76,7 @@ def subjective():
 
 
 
-def domainGet(email):
+    def domainGet(email):
     
     
     # ** Create a function that grabs the email website domain from a string in the form: **
@@ -90,7 +89,7 @@ def domainGet(email):
 
 
 
-def findDog(st):
+    def findDog(st):
     st=st.lower()
     if (st.find('dog')==-1):
         val ='False'
@@ -105,7 +104,7 @@ def findDog(st):
 
 
 
-def countDog(st):
+    def countDog(st):
     st=st.lower()
     
     
@@ -117,7 +116,7 @@ def countDog(st):
 
 
 
-def lambdafunc(seq):
+    def lambdafunc(seq):
     
     
     # ** Use lambda expressions and the filter() function to filter out words from a list that don't start with the letter 's'. For example:**
@@ -132,7 +131,7 @@ def lambdafunc(seq):
 
 
 
-def caught_speeding(speed, is_birthday):
+    def caught_speeding(speed, is_birthday):
     if(is_birthday==True):
         speed=speed-5
     
@@ -160,7 +159,7 @@ def caught_speeding(speed, is_birthday):
 import numpy as np
 
 
-def create_arr_of_fives():
+  def create_arr_of_fives():
   arr=np.ones(5);
   arr=arr*5;
   
@@ -175,7 +174,7 @@ def create_arr_of_fives():
 
 
 
-def even_num():
+  def even_num():
   arr=np.linspace(0,50,26)
     
   ### Create an array of all the even integers from 10 to 50
@@ -186,7 +185,7 @@ def even_num():
 
 
 
-def create_matrix():
+  def create_matrix():
   arr=np.arange(9)
   arr=list(arr.reshape(3,3))
     
@@ -201,7 +200,7 @@ def create_matrix():
 
 
 
-def linear_space():
+  def linear_space():
   l=np.linspace(0,1,20)
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
@@ -209,9 +208,7 @@ def linear_space():
 
   return list(l)
 
-
-
-def decimal_mat():
+    def decimal_mat():
     li=np.linspace(1,100,100).reshape(10,10)
     li=li/100
     
@@ -224,7 +221,7 @@ def decimal_mat():
 
 
 
-def slices_1():
+  def slices_1():
     
   # This is a given array
   arr = np.arange(1,26).reshape(5,5)
@@ -246,7 +243,7 @@ def slices_1():
 
 
 
-def slices_2():
+  def slices_2():
     
   # This is a given array
   arr = np.arange(1,26).reshape(5,5)
@@ -271,7 +268,7 @@ def slices_2():
 
 
 
-def slices_3():
+  def slices_3():
     
   # This is a given array
   arr = np.arange(1,26).reshape(5,5)
