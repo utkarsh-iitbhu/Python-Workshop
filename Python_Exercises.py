@@ -39,7 +39,6 @@ def format(planet, diameter):
     return "The diameter of {planet} is {diameter} kilometers.".format(planet=planet, diameter=diameter)
 
 
-
 def indexing(lst):
 
     # ** Given this nested list, use indexing to grab the word "hello" **
@@ -80,7 +79,7 @@ def domainGet(email):
 def findDog(st):
 
     # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-      if "dog" in st.lower():
+    if "dog" in st.lower():
         return True
 
 
@@ -118,13 +117,12 @@ def caught_speeding(speed, is_birthday):
 
     if speed > 80 + x:
         return "Big Ticket"
-    elif 60 +x < speed <= 80 + x:
+    elif 60 + x < speed <= 80 + x:
         return "Small Ticket"
     else:
         return "No Ticket"
 
     return None
-
 
 
 # Numpy Exercises
