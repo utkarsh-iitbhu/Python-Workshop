@@ -231,7 +231,7 @@ def slices_3():
     # array([[16, 17, 18, 19, 20],
     #      [21, 22, 23, 24, 25]])
 
-    return None
+    return arr[3:6].tolist()
 
 
 # Great job!
