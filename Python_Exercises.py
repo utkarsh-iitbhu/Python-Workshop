@@ -172,7 +172,7 @@ def decimal_mat():
     # Convert your output into list
     # e.g return (arr).tolist()
 
-    return None
+    return np.round(np.arange(0.01, 1.01, 0.01).reshape(10, 10), decimals=2).tolist()
 
 
 def slices_1():
