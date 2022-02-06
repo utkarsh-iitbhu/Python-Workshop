@@ -30,9 +30,9 @@ s1= split_str( "Hi there Sam!")
 print(s1)
 
 def format(planet,diameter):
-  return ("The diameter of {} is {} kilometers".format(planet,diameter))
+  return ("The diameter of {} is {} kilometers.".format(planet,diameter))
 
-planet="earth"
+planet="Earth"
 diameter = 12742
 print(format(planet,diameter))
 
@@ -61,7 +61,7 @@ def subjective():
 # Tuple is immutable 
 #whereas list are mutable meaning the items can be changed 
 
-    return None
+    return "immutable"
 
 def domainGet(email):
     
@@ -174,11 +174,8 @@ def even_num(p):
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
-  p= (np.arange(10,51))
-  arr= filter(lambda item: item%2 == 0,p)
-  return list(arr)
-p = (np.arange(10,51))
-print( even_num(p))
+  return list(np.arange(10,51,2))
+  
 
 def create_matrix():
 
@@ -201,15 +198,14 @@ def linear_space():
 
 print(linear_space())
 
-def decimal_mat():
 
+def decimal_mat():
+    
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-  arr= np.linspace(0.01,1,100).reshape(10,10)
-  return arr.tolist()
 
-print(decimal_mat())
+  return (np.arange(1,101)/100).reshape(10,10).tolist()
 
 def slices_1():
 
