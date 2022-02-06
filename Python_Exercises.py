@@ -253,5 +253,4 @@ def slices_3():
     
    return arr[3:].tolist()
 
-
 # Great job!
