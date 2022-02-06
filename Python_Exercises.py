@@ -75,7 +75,7 @@ def domainGet(email):
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
 
-    return email.split('@')[0]
+    return email.split('@')[1]
 
 
 def findDog(st):
@@ -106,7 +106,7 @@ def lambdafunc(seq):
 # 
 #     ['soup','salad']
 
-    return list(filter(lambda x: x[0] == 's', seq))
+    return list(filter(lambda x: x[0] == "s", seq))
 
 
 def caught_speeding(speed, is_birthday):
