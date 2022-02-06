@@ -3,118 +3,135 @@
 
 # Answer the questions or complete the tasks outlined in bold below.
 
-
+#Q1
 def power(a,b):
-    
-    # ** What is 7 to the power of 4?**
+
+    # take input 'a' and 'b' where 'a' is the number and 'b' is it's power
+    c = a**b
+    print(c)
     
     return None
 
 
-
+#Q2
 def split_str(s):
-    
-    # ** Split this string:**
-# 
-#     s = "Hi there Sam!"
-#     
-# **into a list. **
+
+    #.split() splits a string into a list
+    print(s.split())
 
     return None
 
-
+#Q3
 def format(planet,diameter):
-    
-# ** Given the variables:**
-# 
-#     planet = "Earth"
-#     diameter = 12742
-# 
-# ** Use .format() to print the following string: **
-# 
-#     The diameter of Earth is 12742 kilometers.
+
+     # .format() replaces '{}' with another word/number
+    str = "The diameter of {planet} is {diameter} kilometers.".format(planet = a, diameter = b)
+    print(str)
 
     return None
 
 
-
+#Q4 
 def indexing(lst):
     
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+    print(lst[3][1][2][0])
 
     return None
 
-
+#Q5 
 def dictionary(d):
     
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+    print(d['k1'][3]['tricky'][3]['target'][3])
 
 
     return None
 
 
+#Q6
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
-# Tuple is _______
+# A Tuple is just like a list except that it's contents can not be changed, whereas a list's contents can be changed.
 
-    return None
-
-
+    return "A tuple is immutable"
 
 
+
+#Q7 
 def domainGet(email):
-    
-    # ** Create a function that grabs the email website domain from a string in the form: **
-# 
-#     user@domain.com
-#     
-# **So for example, passing "user@domain.com" would return: domain.com**
-
+    email.split("@")
     return None
 
 
+#Q8
 def findDog(st):
+    # removing punctuations from the string
+    puncs = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    for e in st:
+        if e in puncs:
+            st = st.replace(e,"")
+
+    list = st.split()
+    if "dog" in list:
+        bool = True
+    else:
+        bool = False
+        
+    if bool == True:
+        a = "Given string contains the word 'dog'."
+    else:
+        a = "Given string does not contains the word 'dog'."
     
-# ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-
+    print(a)
     return None
 
 
+#Q9
 def countDog(st):
+    # removing punctuations from the string
+    puncs = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    for e in st:
+        if e in puncs:
+            st = st.replace(e,"")
 
-# ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
-
+    list = st.split()
+    count = list.count("dog")
+    print(count)   
     return None
 
 
-
+#Q10
 def lambdafunc(seq):
     
-    # ** Use lambda expressions and the filter() function to filter out words from a list that don't start with the letter 's'. For example:**
-# 
-#     seq = ['soup','dog','salad','cat','great']
-# 
-# **should be filtered down to:**
-# 
-#     ['soup','salad']
-
+    print(list(filter(lambda element: element[0] == 's', l)))
+    
     return None
 
 
+#Q11
 def caught_speeding(speed, is_birthday):
+    if bday == True:
+        if speed <= 65:
+            a = "No ticket"
+        elif speed > 65 and speed <=85:
+            a = "Small Ticket"
+        elif speed > 85:
+            a = "Big ticket"
+    else:
+        if speed <= 60:
+            a = "No ticket"
+        elif speed > 60 and speed <=80:
+            a = "Small Ticket"
+        elif speed > 80:
+            a = "Big ticket"
     
-    
-# **You are driving a little too fast, and a police officer stops you. Write a function
-#   to return one of 3 possible results: "No ticket", "Small ticket", or "Big Ticket". 
-#   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
-#   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
-#   cases. **
-
+    print(a) 
     return None
 
 
@@ -122,54 +139,34 @@ def caught_speeding(speed, is_birthday):
 
 import numpy as np
 
-
+#Q11
 def create_arr_of_fives():
-    
-  #### Create an array of 10 fives
-  #### Convert your output into list 
-  #### e.g return list(arr) 
-
-  return None
+    matrix = np.ones(10)*5 
+    return list(matrix)
 
 
-
+#Q12
 def even_num():
-    
-  ### Create an array of all the even integers from 10 to 50
-  ### Convert your output into list 
-  ### e.g return list(arr) 
-
-  return None
+    matrix = np.arrange(10,51,2)
+    return list(matrix)
 
 
-
+#Q13
 def create_matrix():
-    
-  ### Create a 3x3 matrix with values ranging from 0 to 8
-  ### Convert your output into list 
-  ### e.g return (arr).tolist()
-
-  return None
+    matrix = np.arrange(0,9).reshape(3,3)
+    return (matrix).tolist()
 
 
-
+#Q14
 def linear_space():
-    
-  ### Create an array of 20 linearly spaced points between 0 and 1
-  ### Convert your output into list 
-  ### e.g return list(arr) 
-
-  return None
+    matrix = np.linspace(0,1,20)
+    return list(matrix)
 
 
-
+#Q15
 def decimal_mat():
-    
-  ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
-  ### Convert your output into list 
-  ### e.g return (arr).tolist()
-
-  return None
+    matrix = np.around(np.linspace(0.01,1,100),decimals = 2).reshape(10*10)
+    return (matrix).tolist()
 
 
 
