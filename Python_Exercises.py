@@ -10,7 +10,7 @@ def power(a,b):
     a=eval(input("Enter the value of number"))
     b=eval(input("The power to which a is raised"))
     return None
-    return (a**b)
+    return a**b
     # is the given example 7 would be inputted as a and 4 as b.
     # The result would be returned as 7**4
 
@@ -42,7 +42,7 @@ def format(planet,diameter):
 #     The diameter of Earth is 12742 kilometers.
 
     return None
-    return(" The diameter of {} is {} kilometers.").format(planet,diameter)
+    return " The diameter of {} is {} kilometers.".format(planet,diameter)
 # The result would be The diameter of Earth is 12742 kilometers.
 
 
@@ -74,7 +74,7 @@ def subjective():
 # Tuple is _______
 #Tuple is immutable whereas a list is mutable.
     return None
-    return('immutable')
+    return 'immutable'
 
 
 
@@ -103,7 +103,7 @@ def countDog(st):
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
 
     return None
-    return (st.lower()).count("dog")
+    return st.lower().count("dog")
 
 
 def lambdafunc(seq):
@@ -156,7 +156,7 @@ def create_arr_of_fives():
   #### Create an array of 10 fives
   #### Convert your output into list 
   #### e.g return list(arr)
-  return(list(np.ones(10,) * 5))
+  return list(np.ones(10,) * 5)
   return None
 
 def even_num():
