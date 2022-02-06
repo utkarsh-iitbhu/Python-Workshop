@@ -156,7 +156,7 @@ def create_matrix():
   ### e.g return (arr).tolist()
 
    arr = np.arange(9)
-  l = arr.reshape(3,3)
+   l = arr.reshape(3,3)
 
   return l.tolist()
 
@@ -179,7 +179,7 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-   arr = np.arange(1,101,1)
+  arr = np.arange(1,101,1)
   arr = arr/100
   l = arr.reshape(10,10)
 
