@@ -29,10 +29,10 @@ print(power(7,4))
 # my solution of task 2
 #--------------------------------------------
 def split_str(S):
-    S = "Hi there Sam !"
+    
     list = S.split(' ')
     return list
-print(split_str(S))
+print(split_str("Hi there Sam !"))
 #--------------------------------------------
 
 #def format(planet,diameter):
