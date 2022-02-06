@@ -252,9 +252,7 @@ def slices_3():
     # e.g return (arr).tolist()
     # array([[16, 17, 18, 19, 20],
     #      [21, 22, 23, 24, 25]])
-    a=arr[3:0,0:0]
-    b =(a).tolist()
-    return b
+    return (arr[3:].tolist())
    
 
 
