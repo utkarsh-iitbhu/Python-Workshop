@@ -4,7 +4,7 @@
 # Answer the questions or complete the tasks outlined in bold below.
 
 
-def pow(a,b):
+def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
