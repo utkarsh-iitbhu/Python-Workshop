@@ -192,7 +192,7 @@ def slices_1():
     #      [17, 18, 19, 20],
     #      [22, 23, 24, 25]])
 
-    return None
+    return arr[2:6, 1:5].tolist()
 
 
 def slices_2():
