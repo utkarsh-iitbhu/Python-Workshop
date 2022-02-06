@@ -156,18 +156,15 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr)
   return(list(np.ones(10,) * 5))
-
   return None
 
-
-
 def even_num():
-   ''' a=[]
-    for i in range(10,51):
-        if i%2==0:
-            a.append(i)
+   #a=[]
+    #for i in range(10,51):
+        #if i%2==0:
+         #   a.append(i)
 
-    return(a)'''
+    #return(a)'''
   #or
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
