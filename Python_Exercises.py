@@ -5,117 +5,92 @@
 
 
 def power(a,b):
-    
-    # ** What is 7 to the power of 4?**
-    
-    return None
-
+    return a**b
+out =  power(7,4)
+print(out)
 
 
 def split_str(s):
-    
-    # ** Split this string:**
-# 
-#     s = "Hi there Sam!"
-#     
-# **into a list. **
-
-    return None
+    x = s.split()
+    return x
+out = split_str("Hi there Sam!")
+print(out)
 
 
 def format(planet,diameter):
-    
-# ** Given the variables:**
-# 
-#     planet = "Earth"
-#     diameter = 12742
-# 
-# ** Use .format() to print the following string: **
-# 
-#     The diameter of Earth is 12742 kilometers.
-
-    return None
-
+     print("The diameter of {} is {} kilometers.".format(planet,diameter))
+out = format("Earth",12742)
 
 
 def indexing(lst):
-    
-# ** Given this nested list, use indexing to grab the word "hello" **
-
-#lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-
-    return None
+    return lst[3][1][2][0]
+out = indexing([1,2,[3,4],[5,[100,200,['hello']],23,11],1,7])
+print(out)
 
 
+import numpy as np
 def dictionary(d):
-    
-# ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
-
-# d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
-
-
-    return None
+  d={'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+  a=d['k1']
+  b=a[3]
+  x=b['tricky'][3]['target'][3]
+  return x
+out = dictionary({'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]})
+print(out)
 
 
 def subjective():
-    
-# ** What is the main difference between a tuple and a list? **
-# Tuple is _______
-
-    return None
-
-
+  return "Tuple is immutable"
+out = subjective()
+print(out)
 
 
 def domainGet(email):
-    
-    # ** Create a function that grabs the email website domain from a string in the form: **
-# 
-#     user@domain.com
-#     
-# **So for example, passing "user@domain.com" would return: domain.com**
-
-    return None
+  spl_word = '@'
+  res = email.partition(spl_word)[2]
+  return res  
+out = domainGet("user@domain.com")
+print(out)
 
 
 def findDog(st):
-    
-# ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-
-    return None
+ substring = "dog"
+ if substring in st:
+    return "True"
+ else:
+    return "False"
+#Test Case :    
+out = findDog("My dog is very cute")    
+print(out)
 
 
 def countDog(st):
+  test_sub = "dog" 
+  res = st.count(test_sub)
+  return str(res)
+out = countDog("dog is a tupid dogs of dogs creatures among dogs of dog")
+print(out)
 
-# ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
 
-    return None
-
-
-
-def lambdafunc(seq):
-    
-    # ** Use lambda expressions and the filter() function to filter out words from a list that don't start with the letter 's'. For example:**
-# 
-#     seq = ['soup','dog','salad','cat','great']
-# 
-# **should be filtered down to:**
-# 
-#     ['soup','salad']
-
-    return None
-
+def lambdafunc(seq): 
+ filtered = list(filter (lambda test: test[0] == "s",seq))
+ return filtered
+out = lambdafunc(['soup', 'dog','salad', 'cat', 'great'])
+print(out)
 
 def caught_speeding(speed, is_birthday):
-    
-    
-# **You are driving a little too fast, and a police officer stops you. Write a function
-#   to return one of 3 possible results: "No ticket", "Small ticket", or "Big Ticket". 
-#   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
-#   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
-#   cases. **
-
-    return None
+if(speed<=60 and is_birthday=="False"):
+print("No ticket")
+elif(speed>=61 and speed<=80 and is_birthday=="False"):
+print("Small ticket")
+elif(speed>=81 and is_birthday=="False"):
+print("Big ticket")
+elif(speed<=65 and is_birthday=="True"):
+print("No ticket")
+elif(speed>=66 and speed<=85 and is_birthday=="True"):
+print("Small ticket")
+elif(speed>=86 and is_birthday=="True"):
+print("Big ticket")
 
 
 ## Numpy Exercises
@@ -124,114 +99,64 @@ import numpy as np
 
 
 def create_arr_of_fives():
-    
-  #### Create an array of 10 fives
-  #### Convert your output into list 
-  #### e.g return list(arr) 
-
-  return None
-
+  my_list = [5,5,5,5,5,5,5,5,5,5]
+  ar = np.array(my_list)
+  return list(ar)
+out = create_arr_of_fives()
+print(out)
 
 
 def even_num():
-    
-  ### Create an array of all the even integers from 10 to 50
-  ### Convert your output into list 
-  ### e.g return list(arr) 
-
-  return None
-
+  array=np.arange(10,50,2)
+  return list(array) 
+out = even_num()
+print(out)
 
 
 def create_matrix():
-    
-  ### Create a 3x3 matrix with values ranging from 0 to 8
-  ### Convert your output into list 
-  ### e.g return (arr).tolist()
-
-  return None
-
+   my_matrix = [[0,1,2] , [3,4,5] , [6,7,8]]
+   arr = np.array(my_matrix)
+   return arr.tolist()
+out = create_matrix()
+print(out)
 
 
 def linear_space():
-    
-  ### Create an array of 20 linearly spaced points between 0 and 1
-  ### Convert your output into list 
-  ### e.g return list(arr) 
-
-  return None
-
+   arr = np.linspace(0,1,20)
+   return list(arr)
+out = linear_space()
+print(out)
 
 
 def decimal_mat():
-    
-  ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
-  ### Convert your output into list 
-  ### e.g return (arr).tolist()
-
-  return None
+  arr = np.linspace(0.01,1,100)
+  return (arr).tolist()
+out = decimal_mat()
+print(out)
 
 
-
-def slices_1():
-    
-  # This is a given array
+def slices_1():   
   arr = np.arange(1,26).reshape(5,5)
-  # array([[ 1,  2,  3,  4,  5],
-  #      [ 6,  7,  8,  9, 10],
-  #      [11, 12, 13, 14, 15],
-  #      [16, 17, 18, 19, 20],
-  #      [21, 22, 23, 24, 25]])
-
-  # Write a code to slice this given array
-  ### Convert your output into list 
-  ### e.g return (arr).tolist()
-  # array([[12, 13, 14, 15],
-  #      [17, 18, 19, 20],
-  #      [22, 23, 24, 25]])
-
-  return None
+  store = arr[2:5,1:5]
+  return store.tolist()
+out = slices_1()
+print(out)
 
 
-
-def slices_2():
-    
-  # This is a given array
+def slices_2():   
   arr = np.arange(1,26).reshape(5,5)
-  # array([[ 1,  2,  3,  4,  5],
-  #      [ 6,  7,  8,  9, 10],
-  #      [11, 12, 13, 14, 15],
-  #      [16, 17, 18, 19, 20],
-  #      [21, 22, 23, 24, 25]])
-
-  # Write a code to slice this given array
-  ### Convert your output into list 
-  ### e.g return (arr).tolist()
-  # array([[ 2],
-  #      [ 7],
-  #      [12]])
-
-  return None 
+  store = arr[0:3,1:2]
+  return store.tolist()
+out = slices_1()
+print(out)
 
 
-
-def slices_3():
-    
-  # This is a given array
+def slices_3():   
   arr = np.arange(1,26).reshape(5,5)
-  # array([[ 1,  2,  3,  4,  5],
-  #      [ 6,  7,  8,  9, 10],
-  #      [11, 12, 13, 14, 15],
-  #      [16, 17, 18, 19, 20],
-  #      [21, 22, 23, 24, 25]])
-
-  # Write a code to slice this given array
-  ### Convert your output into list 
-  ### e.g return (arr).tolist()
-  # array([[16, 17, 18, 19, 20],
-  #      [21, 22, 23, 24, 25]])
-    
-  return None 
+  store = arr[3:5,0:5]
+  return store.tolist()
+out = slices_1()
+print(out) 
 
 
 # Great job!
