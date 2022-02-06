@@ -130,21 +130,17 @@ def caught_speeding(speed, is_birthday):
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
 
-    return None
-if is_birthday== False:
-    if speed<=60:
-        print("No Ticket")
-    elif speed>60 and speed<=80:
-        print("Small Ticket")
-    elif speed>80:
-        print("Big Ticket")
-else:
-     if speed<=65:
-        print("No Ticket")
-     elif speed>65 and speed<=85:
-        print("Small Ticket")
-     else:
-        print("Big Ticket")
+    if is_birthday:
+        speeding = speed - 5
+    else:
+        speeding = speed
+    
+    if speeding > 80:
+        return 'Big Ticket'
+    elif speeding > 60:
+        return 'Small Ticket'
+    else:
+        return 'No Ticket'
 
 ## Numpy Exercises
 
