@@ -154,7 +154,7 @@ def create_matrix():
     # Convert your output into list
     # e.g return (arr).tolist()
 
-    return None
+    return np.arange(9).reshape(3, 3).tolist()
 
 
 def linear_space():
