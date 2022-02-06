@@ -3,17 +3,15 @@
 
 # Answer the questions or complete the tasks outlined in bold below.
 
-
-def power(a,b):
+  def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
-    return None
+  return a**b
+  answer = power(4,7)
 
-
-
-def split_str(s):
-    
+  def split_str(s):
+    print(s.split(" "))
     # ** Split this string:**
 # 
 #     s = "Hi there Sam!"
@@ -21,10 +19,10 @@ def split_str(s):
 # **into a list. **
 
     return None
-
+answer = ["Hi", "there" ,"Sam"]
 
 def format(planet,diameter):
-    
+    print("The diameter of {planet} is {diameter} kilometers".format(planet=Earth,diameter=12742))
 # ** Given the variables:**
 # 
 #     planet = "Earth"
@@ -35,30 +33,37 @@ def format(planet,diameter):
 #     The diameter of Earth is 12742 kilometers.
 
     return None
-
+answer = format(planet,diameter)
 
 
 def indexing(lst):
-    
+   
+     indexa = 1st.index('5,[100,200,['hello']],23,11]') 
+    indexb = indexa.index('[100,200,['hello']]')
+     indexc = indexb.index('['hello']')
+     index = indexc.index('hello')
+     print(index)
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
     return None
-
+answer = print(index)
 
 def dictionary(d):
     
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
-
+print(d[k1]['1,2,3,{'tricky']['oh','man','inception',{'target']['hello'])
+           
 
     return None
 
 
 def subjective():
-    
+    print(tuples cannot be changed but a list can be changed)
+           print(tuple is a collection of some values which are seperated by commas and are enclosed by parenthesis)
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
 
@@ -79,13 +84,17 @@ def domainGet(email):
 
 
 def findDog(st):
-    
+    if word==dog:
+            print("true')
+            else print("false")
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
 
     return None
 
 
 def countDog(st):
+                  a = st.count(dog)
+                  print(a)
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
 
