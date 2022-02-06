@@ -7,8 +7,11 @@
 def power(a,b):
     
     # ** What is 7 to the power of 4?**
-    
+
     return None
+    return (a ** b)
+    # is the given example 7 would be inputted as a and 4 as b.
+    # The result would be returned as 7**4
 
 
 
@@ -19,12 +22,15 @@ def split_str(s):
 #     s = "Hi there Sam!"
 #     
 # **into a list. **
-
+    s="Hi there Sam!"
+    return s.split()
     return None
+    #The result would be ['Hi', 'there', 'Sam!']
 
 
 def format(planet,diameter):
-    
+
+
 # ** Given the variables:**
 # 
 #     planet = "Earth"
@@ -35,6 +41,8 @@ def format(planet,diameter):
 #     The diameter of Earth is 12742 kilometers.
 
     return None
+    return(" The diameter of {} is {} kilometers.").format(planet,diameter)
+# The result would be The diameter of Earth is 12742 kilometers.
 
 
 
@@ -43,26 +51,29 @@ def indexing(lst):
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+    lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+
 
     return None
-
+    return lst[3][1][2][0]
 
 def dictionary(d):
     
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
-# d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+    d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
 
     return None
-
+    return d['k1'][3]['tricky'][3]['target'][3]
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
-
+#Tuple is immutable whereas a list is mutable.
     return None
+    return('immutable')
 
 
 
@@ -76,6 +87,7 @@ def domainGet(email):
 # **So for example, passing "user@domain.com" would return: domain.com**
 
     return None
+    return email[email.find("@")+1: ]
 
 
 def findDog(st):
@@ -83,14 +95,14 @@ def findDog(st):
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
 
     return None
-
+    return st.lower().__contains__('dog')
 
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
 
     return None
-
+    return (st.lower()).count("dog")
 
 
 def lambdafunc(seq):
@@ -104,6 +116,7 @@ def lambdafunc(seq):
 #     ['soup','salad']
 
     return None
+    return list(filter(lambda list:list[0].lower()=='s', seq))
 
 
 def caught_speeding(speed, is_birthday):
@@ -114,6 +127,20 @@ def caught_speeding(speed, is_birthday):
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
+    if is_birthday:
+        if speed<=65:
+            return "No Ticket"
+        elif speed>=66 and speed <=85:
+            return "Small Ticket"
+        else:
+            return "Big Ticket"
+    else:
+        if speed <= 60:
+            return "No Ticket"
+        elif speed >= 61 and speed <= 80:
+            return"Small Ticket"
+        else:
+            return "Big Ticket"
 
     return None
 
@@ -127,18 +154,25 @@ def create_arr_of_fives():
     
   #### Create an array of 10 fives
   #### Convert your output into list 
-  #### e.g return list(arr) 
+  #### e.g return list(arr)
+  return(list(np.ones(10,) * 5))
 
   return None
 
 
 
 def even_num():
-    
+   ''' a=[]
+    for i in range(10,51):
+        if i%2==0:
+            a.append(i)
+
+    return(a)'''
+  #or
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
-
+  return list(np.arange(10, 52, 2))
   return None
 
 
@@ -148,7 +182,7 @@ def create_matrix():
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-
+  return (np.arange(0, 9).reshape(3, 3)).tolist()
   return None
 
 
@@ -157,8 +191,10 @@ def linear_space():
     
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
-  ### e.g return list(arr) 
-
+  ### e.g return list(arr)
+  #return (np.linspace(0,1,20)).tolist()
+  #or
+  return list(np.linspace(0,1,20))
   return None
 
 
@@ -168,7 +204,7 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-
+  return (np.linspace(0.01,1,100).reshape(10,10)).tolist()
   return None
 
 
@@ -191,7 +227,7 @@ def slices_1():
   #      [22, 23, 24, 25]])
 
   return None
-
+  return arr[2:, 1:].tolist()
 
 
 def slices_2():
@@ -211,7 +247,8 @@ def slices_2():
   #      [ 7],
   #      [12]])
 
-  return None 
+  return None
+  return arr[:3,1:2].tolist()
 
 
 
@@ -232,6 +269,6 @@ def slices_3():
   #      [21, 22, 23, 24, 25]])
     
   return None 
-
+  return arr[3:].tolist()
 
 # Great job!
