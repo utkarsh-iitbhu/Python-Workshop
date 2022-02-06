@@ -88,7 +88,7 @@ def countDog(st):
 
     # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
 
-    return None
+    return st.count('dog')
 
 
 def lambdafunc(seq):
