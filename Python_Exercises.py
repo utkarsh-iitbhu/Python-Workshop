@@ -172,8 +172,8 @@ def even_num():
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
-  return list(np.arange(10, 52, 2))
-  return None
+   return list(np.arange(10, 52, 2))
+   return None
 
 
 
