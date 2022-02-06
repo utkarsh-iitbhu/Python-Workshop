@@ -24,7 +24,7 @@ def split_str(s):
 def format(planet,diameter):
     print('the diameter of {} is {} kilometers'.format(planet,diameter))
     return None
-format('earth',12742)_
+format('earth',12742)
 
 # ** Given the variables:**
 # 
