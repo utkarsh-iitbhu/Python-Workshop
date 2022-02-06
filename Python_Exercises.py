@@ -8,8 +8,8 @@ def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
-    def power(a, b):
-      return a**b
+    #def power(a, b):
+    return a**b
 
 
 
