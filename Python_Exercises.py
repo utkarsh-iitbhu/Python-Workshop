@@ -136,7 +136,7 @@ def create_arr_of_fives():
     # Convert your output into list
     # e.g return list(arr)
 
-    return None
+    return list(np.ones(10)*5)
 
 
 def even_num():
