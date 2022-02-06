@@ -212,7 +212,7 @@ def slices_2():
     #      [ 7],
     #      [12]])
 
-    return None
+    return arr[0:3, 1:2].tolist()
 
 
 def slices_3():
