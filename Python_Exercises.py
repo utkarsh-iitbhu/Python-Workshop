@@ -177,7 +177,7 @@ def even_num(p):
   p= (np.arange(10,51))
   arr= filter(lambda item: item%2 == 0,p)
   return list(arr)
-
+p = (np.arange(10,51))
 print( even_num(p))
 
 def create_matrix():
