@@ -20,8 +20,7 @@ def split_str(s):
 #     
 # **into a list. **
 
-     x= s.split()
-    return x
+    return s.split(' ')
 
 
 def format(planet,diameter):
