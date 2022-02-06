@@ -96,7 +96,6 @@ def findDog(st):
    else:
        print("False")
    return None
-findDog("no dog here")
 
 
 def countDog(st):
@@ -157,11 +156,11 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr) 
 
-a= np.random.randint(5,6,10)
-a
-a.tolist()
+    a= np.random.randint(5,6,10)
+    a
+    a.tolist()
 
-  return None
+    return None
 
 
 
@@ -170,11 +169,11 @@ def even_num():
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
-a= np.arange(10,51,2)
-a
-a.tolist()
+    a= np.arange(10,51,2)
+    a
+    a.tolist()
 
-  return None
+    return None
 
 
 
@@ -196,11 +195,11 @@ def linear_space():
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
   ### e.g return list(arr) 
-arr= np.linspace(0,1,20)
-arr
-arr.tolist()
+    arr= np.linspace(0,1,20)
+    arr
+    arr.tolist()
 
-  return None
+    return None
 
 
 
@@ -209,19 +208,19 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-arr= np.arange(0.01,1.0001,0.01).reshape(10,10)
-arr
-arr.tolist()
+    arr= np.arange(0.01,1.0001,0.01).reshape(10,10)
+    arr
+    arr.tolist()
 
 
-  return None
+    return None
 
 
 
 def slices_1():
     
   # This is a given array
-  arr = np.arange(1,26).reshape(5,5)
+    arr = np.arange(1,26).reshape(5,5)
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -234,17 +233,17 @@ def slices_1():
   # array([[12, 13, 14, 15],
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
-a= arr[2: ,1: ]
-a.tolist()
+    a= arr[2: ,1: ]
+    a.tolist()
 
-  return None
+    return None
 
 
 
 def slices_2():
     
   # This is a given array
-  arr = np.arange(1,26).reshape(5,5)
+    arr = np.arange(1,26).reshape(5,5)
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -257,16 +256,16 @@ def slices_2():
   # array([[ 2],
   #      [ 7],
   #      [12]])
-a= arr[0:3,1:2]
-a.tolist()
-  return None 
+    a= arr[0:3,1:2]
+    a.tolist()
+    return None 
 
 
 
 def slices_3():
     
   # This is a given array
-  arr = np.arange(1,26).reshape(5,5)
+    arr = np.arange(1,26).reshape(5,5)
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -279,9 +278,9 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
- a= arr[3: , 0:] 
- a.tolist()
-  return None 
+    a= arr[3: , 0:] 
+    a.tolist()
+    return None 
 
 
 # Great job!
