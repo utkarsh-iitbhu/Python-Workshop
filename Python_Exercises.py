@@ -34,7 +34,7 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    print("The diameter of {var1} is {var2} kilometers.")
+    print("The diameter of {} is {} kilometers.".format(planet, diameter))
     return None
 
 
@@ -126,18 +126,18 @@ def caught_speeding(speed, is_birthday):
 
     if is_birthday:
         if speed < 66:
-            return ("No ticket")
+            return "No ticket"
         elif 65 < speed < 86:
-            return ("Small ticket")
-        elif speed > 85:
-            return ("Big ticket")
+            return "Small ticket"
+        else:
+            return "Big ticket"
     else:
         if speed < 61:
-            return ("No ticket")
+            return "No ticket"
         elif 60 < speed < 81:
-            return("Small ticket")
-        elif speed > 80:
-            return("Big ticket")
+            return "Small ticket"
+        else:
+            return "Big ticket"
 
 ## Numpy Exercises
 
