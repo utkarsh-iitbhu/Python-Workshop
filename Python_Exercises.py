@@ -65,9 +65,9 @@ def dictionary(d):
 def subjective():
 
     # ** What is the main difference between a tuple and a list? **
-    # Tuple is _______(immmutable)
-    # Tuple is immutable 
-
+    # Tuple is _______
+   
+    return 'immutable'
 
  def domainGet(email):
 
