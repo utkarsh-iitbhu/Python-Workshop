@@ -112,7 +112,7 @@ def lambdafunc(seq):
 # 
 #     ['soup','salad']
 
-    return None
+    return list(filter(lambda str: str[0].lower() == 's', seq))
 
 
 def caught_speeding(speed, is_birthday):
@@ -124,8 +124,20 @@ def caught_speeding(speed, is_birthday):
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
 
-    return None
-
+    if is_birthday:
+        if speed < 66:
+            return ("No ticket")
+        elif 65 < speed < 86:
+            return ("Small ticket")
+        elif speed > 85:
+            return ("Big ticket")
+    else:
+        if speed < 61:
+            return ("No ticket")
+        elif 60 < speed < 81:
+            return("Small ticket")
+        elif speed > 80:
+            return("Big ticket")
 
 ## Numpy Exercises
 
@@ -136,9 +148,10 @@ def create_arr_of_fives():
     
   #### Create an array of 10 fives
   #### Convert your output into list 
-  #### e.g return list(arr) 
+  #### e.g return list(arr)
 
-  return None
+    arr = np.zeros(10, dtype = int)
+    return list(arr + 5)
 
 
 
@@ -146,9 +159,11 @@ def even_num():
     
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
-  ### e.g return list(arr) 
+  ### e.g return list(arr)
+    
+    arr = np.arange(10, 51, 2)
 
-  return None
+    return list(arr)
 
 
 
@@ -158,7 +173,8 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return None
+  # return [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
+    return np.arange(9).reshape(3,3).tolist()
 
 
 
@@ -168,7 +184,7 @@ def linear_space():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return None
+  return list(np.linspace(0, 1, 20))
 
 
 
@@ -178,7 +194,7 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return None
+  return  np.linspace(0.01, 1, 100).reshape(10,10).tolist()
 
 
 
@@ -199,7 +215,8 @@ def slices_1():
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
 
-  return None
+
+    return arr[2: , 1: ].tolist()
 
 
 
@@ -220,7 +237,7 @@ def slices_2():
   #      [ 7],
   #      [12]])
 
-  return None 
+  return arr[ :3, 1].tolist()
 
 
 
@@ -240,7 +257,7 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
-  return None 
+  return arr[3:]
 
 
 # Great job!
