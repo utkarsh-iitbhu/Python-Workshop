@@ -34,8 +34,8 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    txt = "The Diameter of {pl} is {di} kilometers."
-    return txt.format(pl=planet, di=diameter)
+    txt = "The Diameter of {} is {} kilometers."
+    return txt.format(planet, diameter)
 
 
 
@@ -45,7 +45,7 @@ def indexing(lst):
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
-    return lst[3][1][2]
+    return lst[3][1][2][0]
 
 
 def dictionary(d):
@@ -177,7 +177,7 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return np.linspace(0.01, 1, 100).reshape(10, 10).tolist()
+  return ((np.arange(1, 101, 1).reshape(10, 10))/100).tolist()
 
 
 
