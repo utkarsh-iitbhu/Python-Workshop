@@ -161,7 +161,7 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return list(np.arrange(10,51,2))
+  return list(np.arange(10,51,2))
 
 
 
