@@ -7,6 +7,7 @@
 def power(a,b):
     
     # ** What is 7 to the power of 4?**
+    print(a**b)
     
     return None
 
@@ -19,6 +20,8 @@ def split_str(s):
 #     s = "Hi there Sam!"
 #     
 # **into a list. **
+    l1=s.split()
+    print(l1)
 
     return None
 
@@ -33,6 +36,7 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
+    print("The diameter of {} is {} kilometers".format(planet,diameter))
 
     return None
 
@@ -43,6 +47,8 @@ def indexing(lst):
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+    s= lst[3][1][2][0]
+    print(s)
 
     return None
 
@@ -52,7 +58,8 @@ def dictionary(d):
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
-
+    s=d['k1'][3]['tricky'][3]['target'][3]
+    print(s)
 
     return None
 
@@ -61,6 +68,7 @@ def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
+    print("immutable")
 
     return None
 
@@ -74,6 +82,8 @@ def domainGet(email):
 #     user@domain.com
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
+    i=email.index('@',0,len(email)-1)
+    print(email[i+1,len(email)])
 
     return None
 
@@ -81,6 +91,8 @@ def domainGet(email):
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
+    flag=st.find('dog')
+    print(flag!=-1)
 
     return None
 
@@ -88,6 +100,7 @@ def findDog(st):
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
+    print(st.count('dog'))
 
     return None
 
@@ -102,6 +115,8 @@ def lambdafunc(seq):
 # **should be filtered down to:**
 # 
 #     ['soup','salad']
+    out=filter(lambda var : var[0]=='s',seq)
+    print(list(out))
 
     return None
 
@@ -114,6 +129,20 @@ def caught_speeding(speed, is_birthday):
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
+    if(is_birthday):
+      if(speed<=65):
+        print("No ticket")
+      elif(speed<=85):
+        print("Small ticket")
+      else:
+        print("Big ticket")
+    else:
+      if(speed<=60):
+        print("No ticket")
+      elif(speed<=80):
+        print("Small ticket")
+      else:
+        print("Big ticket")
 
     return None
 
@@ -128,6 +157,8 @@ def create_arr_of_fives():
   #### Create an array of 10 fives
   #### Convert your output into list 
   #### e.g return list(arr) 
+  array=np.ones(10)*5
+  print(list(array))
 
   return None
 
@@ -138,7 +169,8 @@ def even_num():
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
-
+  array=np.arange(10,50,2)
+  print(list(array))
   return None
 
 
