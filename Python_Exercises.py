@@ -82,7 +82,8 @@ def domainGet(email):
 #     user@domain.com
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
-    i=email.index('@',0,len(email)-1)
+    l=len(email)
+    i=email.index('@',0,l-1)
     print(email[i+1,len(email)])
 
     return None
