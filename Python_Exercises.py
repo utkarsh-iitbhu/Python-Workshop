@@ -235,7 +235,7 @@ def slices_2():
 
 
 def slices_3():
-    
+   
   # This is a given array
   arr = np.arange(1,26).reshape(5,5)
   # array([[ 1,  2,  3,  4,  5],
@@ -246,6 +246,7 @@ def slices_3():
 
   # Write a code to slice this given array
   ### Convert your output into list 
+    
   ### e.g return (arr).tolist()
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
