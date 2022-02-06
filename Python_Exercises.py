@@ -20,12 +20,8 @@ def split_str(s):
     #
     # **into a list. **
     lst1 = s.split()
-    print(lst1)
-    return None
-
-
-split_str(s="Hi there Sam !")
-
+    return lst1
+split_str(s="Hi there Sam!")
 
 def format(planet, diameter):
     # ** Given the variables:**
@@ -36,7 +32,9 @@ def format(planet, diameter):
     # ** Use .format() to print the following string: **
     #
     #     The diameter of Earth is 12742 kilometers.
-    print("The diameter of {one} is {two} kilometers.".format(one=planet, two=diameter))
+
+    return "The diameter of {one} is {two} kilometers.".format(one=planet, two=diameter)
+
 
 
 
@@ -47,8 +45,8 @@ def indexing(lst):
     # ** Given this nested list, use indexing to grab the word "hello" **
 
     # lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-    print(lst[3][1][2][0])
-    return None
+
+    return lst[3][1][2][0]
 
 
 indexing(lst=[1, 2, [3, 4], [5, [100, 200, ['hello']], 23, 11], 1, 7])
@@ -58,8 +56,8 @@ def dictionary(d):
     # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
     # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
-    print(d['k1'][3]['tricky'][3]['target'][3])
-    return None
+
+    return d['k1'][3]['tricky'][3]['target'][3]
 
 
 dictionary(d={'k1': [1, 2, 3, {'tricky': ['oh', 'man', 'inception', {'target': [1, 2, 3, 'hello']}]}]})
@@ -70,7 +68,7 @@ def subjective():
     # Tuple is _______
     # Tuple is immutable , the values/strings assigned to it once cannot be changed later
     # Whereas in list we can change the values assigned to it whenever we want
-    return None
+    return "Immutable"
 
 
 subjective()
@@ -84,8 +82,8 @@ def domainGet():
     # **So for example, passing "user@domain.com" would return: domain.com**
     email = "cops@iitbhu.com"
     x = email.split("@")
-    print(x[1])
-    return None
+
+    return x[1]
 
 
 domainGet()
@@ -123,9 +121,9 @@ def lambdafunc(seq=['soup', 'dog', 'salad', 'cat', 'great']):
     # **should be filtered down to:**
     #
     #     ['soup','salad']
-    print(list(filter(lambda x: x[0] in 's', seq)))
 
-    return None
+
+    return list(filter(lambda x: x[0] in 's', seq))
 
 
 lambdafunc()
@@ -159,8 +157,8 @@ def create_arr_of_fives():
     #### Convert your output into list
     #### e.g return list(arr)
     arr = np.array([5, 5, 5, 5, 5, 5, 5, 5, 5, 5])
-    print(list(arr))
-    return None
+
+    return list(arr)
 
 
 create_arr_of_fives()
@@ -171,8 +169,8 @@ def even_num():
     ### Convert your output into list
     ### e.g return list(arr)
     a = np.arange(10, 51, 2)
-    print(list(a))
-    return None
+
+    return list(a)
 
 
 even_num()
@@ -186,8 +184,8 @@ def create_matrix():
     b = b.reshape(3, 3)
     print(b)  # This will print a 3*3 matrix
     b = b.tolist()  # Converted that matrix into list
-    print(type(b))
-    return None
+
+    return type(b)
 
 
 create_matrix()
@@ -198,8 +196,8 @@ def linear_space():
     ### Convert your output into list
     ### e.g return list(arr)
     c = np.arange(0, 1, 0.05)
-    print(c)
-    return None
+
+    return c
 
 
 linear_space()
@@ -212,8 +210,8 @@ def decimal_mat():
     ### Convert your output into list
     ### e.g return (arr).tolist()
     d = np.arange(0.01, 1.0001, 0.01).reshape(10, 10)
-    print(d)
-    return None
+
+    return d
 
 
 decimal_mat()
@@ -235,11 +233,11 @@ def slices_1():
     #      [17, 18, 19, 20],
     #      [22, 23, 24, 25]])
     arr = arr[2:, 1:]
-    print(arr)
-    arr = arr.tolist()
-    print(type(arr))
-    
-    return None
+
+
+
+
+    return arr.tolist()
 
 
 slices_1()
@@ -262,10 +260,10 @@ def slices_2():
     #      [12]])
     arr = arr[:3, 1]
     arr = arr.reshape(3, 1)
-    print(arr)
-    arr = arr.tolist()
-    print(type(arr))
-    return None
+
+
+
+    return  arr.tolist()
 
 
 slices_2()
@@ -287,13 +285,11 @@ def slices_3():
     #      [21, 22, 23, 24, 25]])
     arr = arr[3:, :]
     print(arr)
-    arr = (arr).tolist()
-    print(type(arr))
 
-    return None
+
+    return (arr).tolist()
 
 
 slices_3()
 
 # Great job!
-
