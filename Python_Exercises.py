@@ -73,7 +73,7 @@ def subjective():
 # Tuple is _______
 
     return None
-immutable
+print("immutable")
 
 
 
@@ -137,14 +137,14 @@ if is_birthday== False:
     elif speed>60 and speed<=80:
         print("Small Ticket")
     elif speed>80:
-     print("Big Ticket")
-    else:
-        if speed<=65:
-            print("No Ticket")
-        elif speed>65 and speed<=85:
-            print("Small Ticket")
-        else:
-            print("Big Ticket")
+        print("Big Ticket")
+else:
+     if speed<=65:
+        print("No Ticket")
+     elif speed>65 and speed<=85:
+        print("Small Ticket")
+     else:
+        print("Big Ticket")
 
 ## Numpy Exercises
 
