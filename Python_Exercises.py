@@ -10,8 +10,6 @@ power(7,4)
     # ** What is 7 to the power of 4?**
     #answer will be 2401
     
-    return None
-
 
 
 def split_str(s):
@@ -22,11 +20,6 @@ def split_str(s):
     s=list(s)
     
 # **into a list. **
-
-
-
-    return None
-
 
 def format(planet,diameter):
     print('the diameter of {} is {} kilometers'.format(planet,diameter))
@@ -41,9 +34,6 @@ format('earth',12742)_
 # ** Use .format() to print the following string: **
 #     The diameter of Earth is 12742 kilometers.
 
-    return None
-
-
 
 def indexing(lst):
     return lst[3][1][2]
@@ -52,8 +42,6 @@ def indexing(lst):
 indexing([1,2,[3,4],[5,[100,200,['hello']],23,11],1,7])  #calling function
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
-
-    return None
 
 
 def dictionary(d):
@@ -65,19 +53,11 @@ dictionary({'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hell
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
 
-    return None
-
-
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______immutable so basically once the data inside tuple is set it can't be changed,whereas the data in list is mutable ,elements can be changed later while programming
 #list can be modified using various built-in methods but tuples don't have these built-in methods
-
-    return None
-
-
-
 
 def domainGet(email):
     mail=email.split('@')
@@ -88,14 +68,13 @@ def domainGet(email):
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
 
-    return None
-
 
 def findDog(st):
+    for i in st.split():
+        if i=='dog':
+            return 'True'
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-
-    return None
 
 
 def countDog(st):
@@ -106,9 +85,7 @@ def countDog(st):
     return number
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
-countDog('hi dog, you are a dog')
-
-    return None
+countDog('hi dog, you are a dog')#calling function
 
 
 
@@ -125,8 +102,6 @@ lambdafunc(['soup','dog','salad','cat','great'])
 # **should be filtered down to:**
 # 
 #     ['soup','salad']
-
-    return None
 
 
 def caught_speeding(speed, is_birthday):
@@ -149,10 +124,6 @@ caught_speed(81,true)
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
-
-    return None
-
-
 ## Numpy Exercises
 
 import numpy as np
@@ -182,10 +153,6 @@ even_num()
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return None
-
-
-
 def create_matrix():
     matrix=np.arange(2,11).reshape(3,3)
     return (matrix).tolist()
@@ -194,8 +161,6 @@ create_matrix()
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-
-  return None
 
 
 
@@ -207,8 +172,6 @@ linear_space()
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
   ### e.g return list(arr) 
-
-  return None
 
 
 
@@ -222,8 +185,6 @@ decimal_mat()
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-
-  return None
 
 
 
@@ -243,10 +204,6 @@ def slices_1():
   # array([[12, 13, 14, 15],
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
-
-  return None
-
-
 
 def slices_2():
     
@@ -268,9 +225,6 @@ slices_2()
   # array([[ 2],
   #      [ 7],
   #      [12]])
-
-  return None 
-
 
 
 def slices_3():
@@ -294,7 +248,4 @@ slices_3()
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
-  return None 
-
-
 # Great job!
