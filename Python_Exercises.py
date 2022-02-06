@@ -4,15 +4,20 @@
 # Answer the questions or complete the tasks outlined in bold below.
 
 
-def power(a,b):
+# def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
-    return None
+   # return None
+# my solution of task 1
+#-------------------------------------------------------------
+def power(a,b):
+    result = a**b
+    return result
+print(power(7,4))
+#--------------------------------------------------------------
 
-
-
-def split_str(s):
+#def split_str(s):
     
     # ** Split this string:**
 # 
@@ -20,10 +25,17 @@ def split_str(s):
 #     
 # **into a list. **
 
-    return None
+   # return None
+# my solution of task 2
+#--------------------------------------------
+def split_str(S):
+    S = "Hi there Sam !"
+    list = S.split(' ')
+    return list
+print(split_str(S))
+#--------------------------------------------
 
-
-def format(planet,diameter):
+#def format(planet,diameter):
     
 # ** Given the variables:**
 # 
@@ -34,40 +46,65 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    return None
+   # return None
+ # my solution of task 3
+#------------------------------------------------
+def format(planet , diameter):
+     planetary_info = " The diameter of {} is {} kilometers."
+     info = planetary_info.format(planet,diameter)
+     return info
+    
+print(format("Earth", 12742))
+#--------------------------------------------------
 
-
-
-def indexing(lst):
+#def indexing(lst):
     
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
-    return None
+    #return None
+# my solution of task 4
+#---------------------------------------------------
 
+def indexing(lst):
+    a = print(lst[3][1][2][0])
+    return a
 
-def dictionary(d):
+indexing(lst=[1,2,[3,4],[5,[100,200,['hello']],23,11],1,7])
+#----------------------------------------------------
+#def dictionary(d):
     
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+# return None
+# my solution of task 5
+#-----------------------------------------------------
+def dictionary(d):
+    d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+    info1 = d['k1']
+    info2=info1[3]
+    info3=info2['tricky']
+    info4=info3[3]
+    info5=info4['target']
+    info6=info5[3]
+    result = print(info6)
+    return result 
 
-
-    return None
-
-
-def subjective():
+dictionary( d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]})
+#----------------------------------------------------------
+#def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
-
-    return None
-
-
-
-
-def domainGet(email):
+#  return None
+# my answer of task 6
+#-------------------------------
+#tuple are immutable                                                           list are mutable
+#Tuple does not have many built-in methods.                                    Lists have several built-in methods
+#----------------------------------------------------------------------------------------------------------------
+#def domainGet(email):
     
     # ** Create a function that grabs the email website domain from a string in the form: **
 # 
@@ -75,25 +112,41 @@ def domainGet(email):
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
 
-    return None
-
-
-def findDog(st):
+ # return None
+# my solution to task 7
+#--------------------------------------------------------------------------------------------------------------
+def domainGet(email):
+    result = email.split('@')[1]
+    OUTPUT = print("output is : " + str(result))
+    return  OUTPUT
+domainGet('user@domain.com')
+#------------------------------------------------------------------------------------------------------------------
+#def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
 
-    return None
-
-
-def countDog(st):
+  #  return None
+ # my solution to task 8
+#------------------------------------------------------------------------------------------------------------------
+def findDog(st):
+    keyword = 'dog'
+    if keyword in st:
+       output = print("true")
+       return output
+findDog('whose dog is this?')
+#------------------------------------------------------------------------------------------------------------------------
+#def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
-
-    return None
-
-
-
-def lambdafunc(seq):
+# return None
+# my solution of task 9
+#---------------------------------------------------------------------------------------------------------------------------
+def countDog(st):
+    times = st.count('dog')
+    return times
+print( countDog('dog 1 barked at dog 2!'))
+#-----------------------------------------------------------------------------------------------------------------------------
+#def lambdafunc(seq):
     
     # ** Use lambda expressions and the filter() function to filter out words from a list that don't start with the letter 's'. For example:**
 # 
@@ -102,10 +155,14 @@ def lambdafunc(seq):
 # **should be filtered down to:**
 # 
 #     ['soup','salad']
-
-    return None
-
-
+#return None
+# my solution of task 10
+#-------------------------------------------------------------------------------------------------------------------------
+def lambdafunc(seq):
+    result=print( list(filter(lambda x: x.startswith("s"), seq)) )
+    return result
+lambdafunc(['soup','dog','salad','cat','great'])  
+#----------------------------------------------------------------------------------------------------------------------------
 def caught_speeding(speed, is_birthday):
     
     
