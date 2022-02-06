@@ -36,7 +36,8 @@ def format(planet, diameter):
     #
     #     The diameter of Earth is 12742 kilometers.
 
-    return None
+    return "The diameter of {planet} is {diameter} kilometers.".format(planet=planet, diameter=diameter)
+
 
 
 def indexing(lst):
