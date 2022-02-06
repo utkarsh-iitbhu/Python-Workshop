@@ -7,9 +7,10 @@
 def power(a,b):
     
     # ** What is 7 to the power of 4?**
-    
+    a=eval(input("Enter the value of number"))
+    b=eval(input("The power to which a is raised"))
     return None
-    return (7**4)
+    return (a**b)
     # is the given example 7 would be inputted as a and 4 as b.
     # The result would be returned as 7**4
 
