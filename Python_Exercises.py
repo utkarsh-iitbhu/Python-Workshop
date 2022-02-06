@@ -145,7 +145,7 @@ def even_num():
     # Convert your output into list
     # e.g return list(arr)
 
-    return None
+    return list(np.arange(10, 51, 2))
 
 
 def create_matrix():
