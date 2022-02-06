@@ -101,7 +101,7 @@ def lambdafunc(seq):
     #
     #     ['soup','salad']
 
-    return None
+    return list(filter(lambda x: x[0] == 's', seq))
 
 
 def caught_speeding(speed, is_birthday):
