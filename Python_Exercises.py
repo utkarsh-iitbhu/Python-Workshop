@@ -40,7 +40,8 @@ def format(planet,diameter):
 #     The diameter of Earth is 12742 kilometers.
 
     return None
-print("The diameter of {planet} is {diameter} kilometers." .format(planet='Earth', diameter='12742'))
+format("earth",12742)
+print("The diameter of {} is {} kilometers." .format(planet, diameter))
 
 
 def indexing(lst):
