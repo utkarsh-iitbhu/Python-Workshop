@@ -74,7 +74,7 @@ def domainGet(email):
     #
     # **So for example, passing "user@domain.com" would return: domain.com**
 
-    return None
+    return email.split("@")[1]
 
 
 def findDog(st):
