@@ -35,7 +35,8 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    return "The diameter of {a} is {b} kilometers".format(a=planet,b=diameter)
+    a="The diameter of {} is {} kilometers".format(planet,diameter)
+    return a
 
 
 
@@ -63,7 +64,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
 
-    return 'immutabe data type'
+    return 'immutable'
 
 
 
@@ -232,7 +233,7 @@ def slices_2():
   #      [ 7],
   #      [12]])
 
-  return (arr[ :3, 1]).tolist()
+  return (arr[ :3, 1:2]).tolist()
 
 
 
