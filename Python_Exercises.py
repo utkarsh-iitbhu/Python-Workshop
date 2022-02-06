@@ -69,7 +69,7 @@ def subjective():
    
     return 'immutable'
 
- def domainGet(email):
+def domainGet(email):
 
     # ** Create a function that grabs the email website domain from a string in the form: **
     #
