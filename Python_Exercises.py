@@ -10,10 +10,8 @@ def split_str(s):
 
 
 def format(planet,diameter):
-    s="The diameter of {one} is {two} kilometers.".format(one=str(planet), diameter=str(diameter))
+    s="The diameter of {planet} is {diameter} kilometers.".format(planet=str(planet), diameter=str(diameter))
     return s
-
-
 
 def indexing(lst):
     return lst[3][1][2][0]
@@ -47,7 +45,7 @@ def countDog(str):
     freq=0
     for i in range(0, len(lst)):
         if ("dog"==lst[i].lower()):
-            frq+=1
+            freq+=1
     return freq
 
 
@@ -87,8 +85,8 @@ def create_arr_of_fives():
 
 def even_num():
   arr=np.arange(10, 51, 2)
-  arr1=arr.tolist()
-  return arr1
+  lst=arr.tolist()
+  return lst
 
 
 
@@ -108,7 +106,7 @@ def linear_space():
 
 def decimal_mat():
   arr4=np.arange(1, 101).reshape(10, 10)
-  arr5=arr1/100
+  arr5=arr4/100
   arr6=arr5.tolist()
   return arr6
 
