@@ -35,8 +35,8 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    a="The diameter of {} is {} kilometers".format(planet,diameter)
-    return a
+    
+    return "The diameter of {} is {} kilometers.".format(planet, diameter) 
 
 
 
