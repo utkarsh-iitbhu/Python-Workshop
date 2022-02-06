@@ -155,7 +155,7 @@ print(caught_speeding(62, True))
 
 """
 
-!pip install numpy
+
 import numpy as np
 
 def create_arr_of_fives():
