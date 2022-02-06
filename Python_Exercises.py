@@ -130,7 +130,7 @@ def caught_speeding(speed, is_birthday):
         return "Small Ticket"
     elif speed>80 and is_birthday==False:
         return "Big Ticket"
-    else speed>85 and is_birthday==True:
+    elif speed>85 and is_birthday==True:
         return "Big Ticket"
 
 
