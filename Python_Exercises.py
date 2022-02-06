@@ -106,7 +106,7 @@ def lambdafunc(seq):
     return list(filter(lambda s: s[0].lower()=='s', seq))
 
 
-def caught_speeding(speed, is_birthday):
+  def caught_speeding(speed, is_birthday):
     
     
 # **You are driving a little too fast, and a police officer stops you. Write a function
@@ -115,20 +115,10 @@ def caught_speeding(speed, is_birthday):
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
 
-    limits = [60, 80]
-  if is_birthday:
-    limits = [65, 85]
-
-  if speed <= limits[0]:
-    return "No Ticket"
-
-  elif speed <= limits[1]:
-    return "Small Ticket"
-
-  else:
-    return "Big Ticket"
-
-
+    speed -= is_birthday*5
+    if speed<=60 : return "No Ticket"
+    elif speed<=80 : return "Small Ticket"
+    else: return "Big    Ticket" 
 ## Numpy Exercises
 
 import numpy as np
