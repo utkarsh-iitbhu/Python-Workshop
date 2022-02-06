@@ -15,7 +15,7 @@ def power(a,b):
 
 def split_str(s):
     
-    # ** Split this string:**
+# ** Split this string:**
 # 
 #     s = "Hi there Sam!"
 #     
@@ -36,7 +36,7 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    print("The diameter of {} is {} kilometers".format(planet,diameter))
+    print("The diameter of {} is {} kilometers.".format(planet,diameter))
 
     return None
 
@@ -169,7 +169,7 @@ def even_num():
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
-  array=np.arange(10,50,2)
+  array=np.arange(10,51,2)
   print(list(array))
   return None
 
@@ -180,6 +180,7 @@ def create_matrix():
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
+
 
   return None
 
