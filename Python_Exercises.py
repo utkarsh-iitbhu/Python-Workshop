@@ -183,11 +183,11 @@ def create_matrix():
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
-a= np.random.randint(0,8,[3,3])
-a
-a.tolist()
+    a= np.random.randint(0,8,[3,3])
+    a
+    a.tolist()
 
-  return None
+    return None
 
 
 
