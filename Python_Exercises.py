@@ -60,7 +60,7 @@ def dictionary(d):
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
      str=d['k1'][3]['tricky'][3]['target'][3]
-    return str 
+     return str 
 
 
 def subjective():
@@ -68,7 +68,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
      answer="immutable"
-      return answer
+     return answer
 
 
 def domainGet(email):
@@ -93,7 +93,7 @@ def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
      solution=len(st.lower().split("dog")) + 1
-    return solution
+     return solution
 
 
 
@@ -116,26 +116,23 @@ def caught_speeding(speed, is_birthday):
 # **You are driving a little too fast, and a police officer stops you. Write a function
 #   to return one of 3 possible results: "No ticket", "Small ticket", or "Big Ticket". 
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
-#   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket".
-#  Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
+#   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
-       if speed<=60:
-        return "No Ticket"
-    elif speed>60 and speed<=65 and is_birthday==True:
-        return "No Ticket"
-    elif speed>60 and speed<=80 and is_birthday==False:
-        return "Small Ticket"
-    elif speed>65 and speed<=85 and is_birthday==True:
-        return "Small Ticket"
-    elif speed>80 and speed<=85 and is_birthday==True:
-        return "Small Ticket"
-    elif speed>80 and is_birthday==False:
-        return "Big Ticket"
-    elif speed>85 and is_birthday==True:
-    else speed>85 and is_birthday==True:
-        
-
-    return "Big Ticket"
+       if is_birthday==False:
+        if speed<=60:
+            status= 'No Ticket'
+        elif speed<=80:
+            status= 'Small Ticket'
+        else:
+            status= 'Big Ticket'
+      else:
+        if speed<=65:
+            status= 'No Ticket'
+        elif speed<=85:
+            status= 'Small Ticket'
+        else:
+            status= 'Big Ticket'
+      return status
 
 
 ## Numpy Exercises
@@ -149,7 +146,7 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr) 
     solution=(5*np.ones(10)).tolist()
-  return solution
+    return solution
 
 
 
@@ -159,7 +156,7 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
     solution=list(np.array(range(10,51,2)))
-  return solution
+    return solution
 
 
 
@@ -169,7 +166,7 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
      ar=np.arrange(0,9).reshape(3,3)
-  return ar.tolist()
+     return ar.tolist()
 
 
 
@@ -199,7 +196,7 @@ def decimal_mat():
   [0.81, 0.82, 0.83, 0.84, 0.85, 0.86, 0.87, 0.88, 0.89, 0.9],
   [0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1.]]
 
-  return solution
+      return solution
 
 
 
@@ -219,8 +216,8 @@ def slices_1():
   # array([[12, 13, 14, 15],
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
-         solution=(arr[2:,1:]).tolist()
-  return solution
+     solution=(arr[2:,1:]).tolist()
+     return solution
 
 
 
@@ -241,7 +238,7 @@ def slices_2():
   #      [ 7],
   #      [12]])
       solution=(arr[:3, 1:2]).tolist()
-  return solution
+      return solution
 
 
 
@@ -261,7 +258,7 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     solution=(arr[3:]).tolist
-  return solution 
+    return solution 
 
 
 # Great job!
