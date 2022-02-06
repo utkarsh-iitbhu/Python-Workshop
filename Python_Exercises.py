@@ -242,5 +242,3 @@ def slices_3():
 
   return arr10
  # Great job!
-
-slices_2()
