@@ -34,7 +34,7 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
-    return "The diameter of {} is {} kilometers.".format(planet,diameter))
+    return "The diameter of {} is {} kilometers.".format(planet,diameter)
 
 
 
@@ -62,7 +62,7 @@ def subjective():
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
 
-    return immutable
+    return "immutable"
 
 
 def domainGet(email):
@@ -73,31 +73,21 @@ def domainGet(email):
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
      
-     flag=0
-     for i in email:
-        if(i=='@'):
-          flag= -1
-          continue
-        
-        if(flag==-1)
-           return email[email.index(i):]
+ return email.split('@')[1]
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
      
-    if('dog' in st):
-     return True
-    else:
-      return False
+    return 'dog' in st.lower()
 
 
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
 
- return st.lower().count("dog")
+ return (st.lower()).count("dog")
 
 
 
@@ -124,17 +114,16 @@ def caught_speeding(speed, is_birthday):
 #   cases. **
 
 
-if(is_birthday== True):
-    speed= speed-5
-    
-    if(speed<=60):
-    return 'No ticket'
-  elif(speed<=80):
-    return 'Small Ticket'
+if(is_birthday):
+    s=5
   else:
-    return 'Big Ticket'
-
-
+    s=0
+  if(speed<=(60+s)):
+    return "No Ticket"
+  elif(speed>=(61+s) and speed<=(80+s)):
+    return "Small Ticket"
+  else:
+    return "Big Ticket"
 ## Numpy Exercises
 
 import numpy as np
@@ -146,9 +135,7 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr) 
   
-    arr=np.fives(10)
-  return list(arr)
-
+   return list(np.ones(10)*5)
 
 
 def even_num():
@@ -157,7 +144,7 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  evenarr= np.arrange(10,51,2)
+  evenarr= np.arrange(10,52,2)
   return list(evenarr)
 
 
@@ -190,7 +177,7 @@ def decimal_mat():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return ((np.arange(1, 101, 1).reshape(10, 10))/100).tolist()
+  return (np.arange(1, 101)/100).reshape(10, 10).tolist()
 
 
 
@@ -211,7 +198,7 @@ def slices_1():
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
 
-  arr = np.array([list(arr[2:][1:])])
+  arr = np.array([list(arr[2:,1:])])
   return (arr).tolist()
 
 
@@ -233,7 +220,7 @@ def slices_2():
   #      [ 7],
   #      [12]])
 
-  arr= np.array([list(arr[0:3][2])])
+  arr= np.array([list(arr[0:3,2])])
     return (arr).tolist()
 
 
@@ -254,7 +241,7 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
-    arr= np.array([list(arr[3:][:])])
+    arr= np.array([list(arr[3:,:])])
   return (arr).tolist()
 
 
