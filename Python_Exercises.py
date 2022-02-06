@@ -80,8 +80,8 @@ def domainGet(email):
 def findDog(st):
 
     # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-
-    return None
+      if "dog" in st.lower():
+        return True
 
 
 def countDog(st):
