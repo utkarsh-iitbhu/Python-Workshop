@@ -59,7 +59,7 @@ def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
-    s="# Tuple is immutable"
+    s="immutable"
 
     return s
 
