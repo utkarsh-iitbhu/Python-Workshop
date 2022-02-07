@@ -31,7 +31,7 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    s="The diameter of {planet} is {diameter} kilometers".format(planet=planet,diameter=diameter)
+    s="The diameter of {} is {} kilometers.".format(planet,diameter)
     return s
 
 
@@ -52,14 +52,14 @@ def dictionary(d):
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
 
-    return print(d['k1'][3]['tricky'][3]['target'][3])
+    return d['k1'][3]['tricky'][3]['target'][3]
 
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
-    s="Tuple is immutable"
+    s="# Tuple is immutable"
 
     return s
 
