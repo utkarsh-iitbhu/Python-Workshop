@@ -32,9 +32,9 @@ def format(planet,diameter):
   diameter = 12742
 
 # ** Use .format() to print the following string: **
-  print("The diameter of {} is {} kilometers.".format(planet,diameter))
+  
 
-  return None
+  return "The diameter of {} is {} kilometers.".format(planet,diameter)
 
 
 def indexing(lst):
