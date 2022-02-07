@@ -20,10 +20,15 @@ def format(planet,diameter):
   return ( 'The diameter of {} is {} kilometers.' .format(planet,diameter)
           
           
-
 def indexing(lst):
-          lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+    
+# ** Given this nested list, use indexing to grab the word "hello" **
+
+#lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+
+    
     return lst[3][1][2][0]
+
 
 
 d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
