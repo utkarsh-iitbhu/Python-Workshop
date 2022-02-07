@@ -32,7 +32,7 @@ def format(planet,diameter):
   diameter = 12742
 
 # ** Use .format() to print the following string: **
-  print("The diameter of: {} is: {} kilometers.".format(planet,diameter))
+  print("The diameter of {} is {} kilometers.".format(planet,diameter))
 
   return None
 
@@ -114,11 +114,11 @@ def caught_speeding(speed, is_birthday):
      limits =[60,80]
 
    if speed<=limits[0]:
-      return "No ticket"
+      return "No Ticket"
    elif speed<=limits[1]:
-      return "Small ticket"
+      return "Small Ticket"
    else:
-      return "Big ticket"
+      return "Big Ticket"
       
 
 
