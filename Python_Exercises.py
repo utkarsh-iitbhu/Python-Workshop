@@ -15,11 +15,9 @@ def split_str(s):
     
     # ** Split this string:**
 #
-    s = "Hi there Sam!"
-#     
-# **into a list. **
-    lst = s.spilt()
-    return lst
+   s = "Hi there Sam!"
+   my_list=list(s.split())
+   return my_list
 
 
 def format(planet,diameter):
@@ -32,9 +30,8 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    print("The diameter of {} is {} kilometers".format(planet,diameter))
+    return "The diameter of {} is {} kilometers".format(planet,diameter)
 
-    return None
 
 
 
@@ -43,9 +40,7 @@ def indexing(lst):
 # ** Given this nested list, use indexing to grab the word "hello" **
 
     lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-    print(lst[3][1][1][2])
-
-    return None
+    return lst[3][1][2][0]
 
 
 def dictionary(d):
@@ -53,17 +48,15 @@ def dictionary(d):
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
     d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
-    print(d['k1'][3]['tricky'][3]['target'][3])
+    return d['k1'][3]['tricky'][3]['target'][3]
 
-    return None
 
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is immutable whereas a list is mutable
-    print("Tuple is immutable whereas list is mutable")
-    return None
+    return "immutable"
 
 
 
@@ -75,33 +68,23 @@ def domainGet(email):
 #     user@domain.com
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
-    s = input()
-    i = s.find('@')
-    print(s[i:s.length()])
-    return None
+    my_list=list(email.split("@"))
+    return str(my_list[1])
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-    flag = 0
-    for i in range(0,s.length()-3):
-        if (s[i:i+3] == 'dog'):
-            flag = 1
-            return True
-        
-    if flag == 0:
-        return None
+    return "dog" in st.lower()
+
 
 
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
     count = 0
-    for i in range(0,s.length()-3):
-        if (s[i:i+3] == 'dog'):
-            count = count + 1
-    return count
+    return len(st.lower().split("dog"))-1
+
 
 
 
@@ -111,15 +94,12 @@ def lambdafunc(seq):
 # 
     seq = ['soup','dog','salad','cat','great']
     a = []
-    for i in range (0,seq.length()):
-        if i[0] == 's':
-            a.append(i)
+    return list(filter(lambda var:var[0]=='s',(seq)))
 # 
 # **should be filtered down to:**
 # 
 #     ['soup','salad']
 
-    return a
 
 
 def caught_speeding(speed, is_birthday):
@@ -130,14 +110,17 @@ def caught_speeding(speed, is_birthday):
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
-    speed = int(input())
-    if speed <=60:
-        print("No ticket")
-    elif 61 <= speed <=80:
-        print("Small ticket")
+    if (is_birthday):
+        limits =[65,85]
     else:
-        print("Big Ticket")
-    return None
+        limits =[60,80]
+
+    if speed<=limits[0]:
+        return "No Ticket"
+    elif speed<=limits[1]:
+        return "Small Ticket"
+    else:
+        return "Big Ticket"
 
 
 ## Numpy Exercises
