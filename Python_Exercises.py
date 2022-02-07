@@ -96,7 +96,7 @@ def lambdafunc(seq):
     a = []
     return list(filter(lambda var:var[0]=='s',(seq)))
 # 
-# **should be filtered down to:**
+# **should be filtered down to: **
 # 
 #     ['soup','salad']
 
