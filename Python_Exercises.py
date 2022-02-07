@@ -198,7 +198,7 @@ def slices_1():
   #      [21, 22, 23, 24, 25]])
 
   # Write a code to slice this given array
-     l = np.array([x[1:] for x in arr[2:]])
+  l = np.array([x[1:] for x in arr[2:]])
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   # array([[12, 13, 14, 15],
@@ -220,7 +220,7 @@ def slices_2():
   #      [21, 22, 23, 24, 25]])
 
   # Write a code to slice this given array
-    l = np.array([x[1:2] for x in arr[:3]])
+  l = np.array([x[1:2] for x in arr[:3]])
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   # array([[ 2],
@@ -242,7 +242,7 @@ def slices_3():
   #      [21, 22, 23, 24, 25]])
 
   # Write a code to slice this given array
-     l = arr[3:]
+  l = arr[3:]
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   # array([[16, 17, 18, 19, 20],
