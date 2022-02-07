@@ -30,7 +30,7 @@ def format(planet,diameter):
 # ** Use .format() to print the following string: **
 # 
 #     The diameter of Earth is 12742 kilometers.
-    return "The diameter of {} is {} kilometers".format(planet,diameter)
+    return "The diameter of {} is {} kilometers.".format(planet,diameter)
 
 
 
@@ -96,7 +96,7 @@ def lambdafunc(seq):
     a = []
     return list(filter(lambda var:var[0]=='s',(seq)))
 # 
-# **should be filtered down to: **
+# **should be filtered down to:**
 # 
 #     ['soup','salad']
 
