@@ -6,10 +6,9 @@
 
 def power(a,b):
     
-    # ** What is 7 to the power of 4?**
-    print(7**4)
+    # ** What is 7 to the power of 4?
     
-    return None
+    return a**b
 
 
 
@@ -17,13 +16,11 @@ def split_str(s):
     
     # ** Split this string:**
 # 
-      s = "Hi there Sam!"
+#     s = "Hi there Sam!"
 #     
 # **into a list. **
-      x=s.split()
-      print(x)
        
-      return None
+      return s.split()
 
 
 def format(planet,diameter):
@@ -35,9 +32,9 @@ def format(planet,diameter):
 # 
 # ** Use .format() to print the following string: **
 # 
-     print("The diameter of {} is {} kilometers.".format(planet,diameter))
+#     print("The diameter of {} is {} kilometers.".format(planet,diameter))
 
-     return None
+     return "The diameter of {} is {} kilometers.".format(planet,diameter)
 
 
 
@@ -45,29 +42,29 @@ def indexing(lst):
     
 # ** Given this nested list, use indexing to grab the word "hello" **
 
-    lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-    print(lst[3][1][2][0])
+#    lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+#    print(lst[3][1][2][0])
 
-    return None
+    return lst[3][1][2][0]
 
 
 def dictionary(d):
     
 # ** Given this nested dictionary grab the word "hello". Be prepared, this will be annoying/tricky **
 
-    d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
-    print(d['k1'][3]['tricky'][3]['target'][3])
+  # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+  # print(d['k1'][3]['tricky'][3]['target'][3])
 
 
-    return None
+    return d['k1'][3]['tricky'][3]['target'][3]
 
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
-    print("Tuple is immutable")
+#    print("Tuple is immutable")
 
-    return None
+    return "immutable"
 
 
 
@@ -98,8 +95,7 @@ def countDog(st):
     for item in t:
         if item=='dog':
           count=count+1
-    print(count)
-    return None
+    return count
 
 
 
@@ -114,9 +110,8 @@ def lambdafunc(seq):
 #     ['soup','salad']
 
       t=list(filter(lambda item: 's' in item, seq))
-      print(t)
 
-      return None
+      return t
 
 
 def caught_speeding(speed, is_birthday):
@@ -127,12 +122,22 @@ def caught_speeding(speed, is_birthday):
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
-    if speed<=60:
-      return "No Ticket"
-    elif speed>60 and speed<=80:
-      return "Small Ticket"
-    elif speed>80:
-      return "Big Ticket"
+    if is_birthday==true:
+      if speed<=65:
+        return "No Ticket"
+      elif speed<=85:
+        return "Small Ticket"
+      else:
+        return "Big Ticket"
+    else:
+      if speed<=60:
+        return "No Ticket"
+      elif speed<=80:
+        return "Small Ticket"
+      else:
+        return "Big Ticket"
+
+
  
 
 
@@ -155,7 +160,7 @@ def create_arr_of_fives():
 def even_num():
     
   ### Create an array of all the even integers from 10 to 50
-  l=np.arange(10,50,2)
+  l=np.arange(10,51,2)
   ### Convert your output into list 
   ### e.g return list(arr) 
 
@@ -190,10 +195,11 @@ def decimal_mat():
     
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
     l=np.linspace(0.01,1,100).reshape(10,10)
+    x=np.round(l,decimals=2)
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-    return l.tolist()
+    return x.tolist()
 
 
 
@@ -236,7 +242,7 @@ def slices_2():
   # array([[ 2],
   #      [ 7],
   #      [12]])
-  l=arr[0:3,1]
+  l=arr[:3,1:2]
 
   return l.tolist()
 
