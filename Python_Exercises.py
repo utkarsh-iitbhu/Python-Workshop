@@ -94,11 +94,11 @@ def dictionary(d):
 
 dictionary( d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]})
 #----------------------------------------------------------
-#def subjective():
+def subjective():
     
 # ** What is the main difference between a tuple and a list? **
 # Tuple is _______
-#  return None
+  return None
 # my answer of task 6
 #-------------------------------
 #tuple are immutable                                                           list are mutable
