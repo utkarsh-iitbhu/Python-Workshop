@@ -245,7 +245,7 @@ def slices_3():
   #      [16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
 
-  # Write a code to slice this given array
+  # Write a code to slice this  given array
   ### Convert your output into list 
   ### e.g return (arr).tolist()
   # array([[16, 17, 18, 19, 20],
