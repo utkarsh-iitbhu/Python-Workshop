@@ -22,7 +22,7 @@ def format(planet,diameter):
           
 lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 def indexing(lst):
-    return lst[3][1][2]
+    return lst[3][1][2][0]
 indexing(lst)
 
 d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
