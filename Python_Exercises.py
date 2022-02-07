@@ -19,9 +19,9 @@ def split_str(s):
    s = "Hi there Sam!"
    my_list=list(s.split())
 # **into a list. **
-   print (my_list)
+   
 
-   return list
+   return my_list
 
 
 def format(planet,diameter):
@@ -154,9 +154,9 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  my_list=np.arange(9).reshape(3,3).tolist()
+  
 
-  return my_list
+  return np.arange(9).reshape(3,3).tolist()
 
 
 
