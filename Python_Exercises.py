@@ -102,10 +102,9 @@ def lambdafunc(seq):
 # 
 #     ['soup','salad']
 
-    return list(filter(lamda x: x[0] =="s" ,seq))
-
-
-def caught_speeding(speed, is_birthday):
+     seq = ['soup','dog','salad','cat','great']
+    a = []
+    return list(filter(lambda var:var[0]=='s',(seq)))
     
     
 # **You are driving a little too fast, and a police officer stops you. Write a function
