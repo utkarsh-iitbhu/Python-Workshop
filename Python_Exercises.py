@@ -133,8 +133,8 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr) 
 
-  array=np.ones(10)*5
-    return list(array)
+  
+ return list(np.ones(10)*5)
 
 
 
@@ -144,7 +144,7 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  array=np.arange(10,51,2)
+  array=np.arange(10, 51, 2)
     return list(array)
 
 
@@ -155,7 +155,7 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  arr = np.arrange(0, 9).reshape(3,3)
+  arr = np.arrange(0, 9).reshape(3, 3)
     return (arr).tolist()
 
 
@@ -166,7 +166,7 @@ def linear_space():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  arr=np.linspace(0,1 , 20)
+  arr=np.linspace(0, 1 , 20)
     return list(arr)
 
 
@@ -185,7 +185,7 @@ def decimal_mat():
 def slices_1():
     
   # This is a given array
-  arr = np.arange(1,26).reshape(5,5)
+  arr = np.arange(1, 26).reshape(5, 5)
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -199,8 +199,7 @@ def slices_1():
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
 
-x=arr[2:, 1:]
-return (x).tolist()
+return arr[2:6, 1:5].tolist()
 
 
 
@@ -221,15 +220,15 @@ def slices_2():
   #      [ 7],
   #      [12]])
 
-  x=arr[:3, 1:2]
-    return (x).tolist()
+  
+return arr[0:3, 1:2].tolist()
 
 
 
 def slices_3():
     
   # This is a given array
-  arr = np.arange(1,26).reshape(5,5)
+  arr = np.arange(1, 26).reshape(5, 5)
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -242,8 +241,7 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
-  x=arr[3:, : ]
-return (x).tolist()
+ return arr[3:6].tolist()
 
 
 # Great job!
