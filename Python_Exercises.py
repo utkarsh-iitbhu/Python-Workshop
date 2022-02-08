@@ -68,28 +68,28 @@ def subjective():
     # Tuple is _______
     # Tuple is immutable , the values/strings assigned to it once cannot be changed later
     # Whereas in list we can change the values assigned to it whenever we want
-    return "Immutable"
+    return "immutable"
 
 
 subjective()
 
 
-def domainGet():
+def domainGet(email):
     # ** Create a function that grabs the email website domain from a string in the form: **
     #
     #     user@domain.com
     #
     # **So for example, passing "user@domain.com" would return: domain.com**
-    email = "cops@iitbhu.com"
+
     x = email.split("@")
 
     return x[1]
 
 
-domainGet()
+domainGet(email="cops@iitbhu.com")
 
 
-def findDog(st="see there is a Dog"):
+def findDog(st):
     # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
     st.lower()
     lst2 = st.split()
@@ -97,17 +97,17 @@ def findDog(st="see there is a Dog"):
         print('true')
     else:
         print('false')
-    return None
+    return print('findDog')
 
 
-findDog()
+findDog(st='there is a dog')
 
 
 def countDog(st='a dog is a dog and dog barks'):
     # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
     counting = st.count('dog')
-    print(counting)
-    return None
+
+    return print(counting)
 
 
 countDog()
@@ -129,23 +129,30 @@ def lambdafunc(seq=['soup', 'dog', 'salad', 'cat', 'great']):
 lambdafunc()
 
 
-def caught_speeding():
+def caught_speeding(speed, is_birthday):
     # **You are driving a little too fast, and a police officer stops you. Write a function
     #   to return one of 3 possible results: "No ticket", "Small ticket", or "Big Ticket".
     #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61
     #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all
     #   cases. **
-    speed = int(input('Enter the speed of the driver'))
-    if speed <= 60:
-        print('No Ticket')
-    if speed > 60 and speed < 80:
-        print('Small Ticket')
-    if speed > 80:
+
+    if is_birthday == 'True' and speed<=65:
+        print('No ticket')
+    if is_birthday == 'True' and speed > 65 and speed < 85:
+        print("Small Ticket")
+    if is_birthday == 'True' and speed>=85:
         print('Big Ticket')
-    return None
 
+    elif is_birthday == 'False' :
+        if speed <= 60:
+            print('No Ticket')
+        if speed > 60 and speed < 80:
+            print('Small Ticket')
+        if speed > 80:
+            print('Big Ticket')
+        return caught_speeding()
+caught_speeding(85,'True')
 
-caught_speeding()
 
 ## Numpy Exercises
 
@@ -180,12 +187,11 @@ def create_matrix():
     ### Create a 3x3 matrix with values ranging from 0 to 8
     ### Convert your output into list
     ### e.g return (arr).tolist()
-    b = np.random.randint(1, 9, 9)
-    b = b.reshape(3, 3)
-    print(b)  # This will print a 3*3 matrix
-    b = b.tolist()  # Converted that matrix into list
+    b = np.linspace(0,8.,9)
+      # This will print a 3*3 matrix
+      # Converted that matrix into list
 
-    return type(b)
+    return b.tolist()
 
 
 create_matrix()
@@ -195,9 +201,9 @@ def linear_space():
     ### Create an array of 20 linearly spaced points between 0 and 1
     ### Convert your output into list
     ### e.g return list(arr)
-    c = np.arange(0, 1, 0.05)
+    c = np.linspace(0, 1.,20)
 
-    return c
+    return c.tolist()
 
 
 linear_space()
@@ -209,9 +215,9 @@ def decimal_mat():
     ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
     ### Convert your output into list
     ### e.g return (arr).tolist()
-    d = np.arange(0.01, 1.0001, 0.01).reshape(10, 10)
+    d = np.around(np.linspace(0.01,1.,100),decimals=2).reshape(10,10)
 
-    return d
+    return d.tolist()
 
 
 decimal_mat()
