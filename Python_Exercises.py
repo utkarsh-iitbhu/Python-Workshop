@@ -101,10 +101,15 @@ def lambdafunc(seq):
 # **should be filtered down to:**
 # 
 #     ['soup','salad']
+    #
+    #     seq = ['soup','dog','salad','cat','great']
+    #
+    # **should be filtered down to:**
+    #
+    #     ['soup','salad']
 
-     seq = ['soup','dog','salad','cat','great']
-    a = []
-    return list(filter(lambda var:var[0]=='s',(seq)))
+    return None
+    return list(filter(lambda x: x[0] == 's', seq))
     
     
 # **You are driving a little too fast, and a police officer stops you. Write a function
