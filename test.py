@@ -159,3 +159,4 @@ for func in funcs:
 print("Your score is "+str(score)+"!!,\nYou will receive extra points for smart implementation directly on the pull request")
 if score!=len(funcs):
     raise Exception("Did not pass all tests")
+
