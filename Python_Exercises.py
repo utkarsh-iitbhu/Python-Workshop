@@ -11,10 +11,15 @@
    # return None
 # my solution of task 1
 #-------------------------------------------------------------
+from re import A
+
+from pyrsistent import immutable
+
+
 def power(a,b):
-    result = a**b
-    return result
-print(power(7,4))
+    return a**b
+    
+
 #--------------------------------------------------------------
 
 #def split_str(s):
@@ -29,10 +34,9 @@ print(power(7,4))
 # my solution of task 2
 #--------------------------------------------
 def split_str(S):
+    return  S.split(' ')
     
-    list = S.split(' ')
-    return list
-print(split_str("Hi there Sam !"))
+
 #--------------------------------------------
 
 #def format(planet,diameter):
@@ -50,28 +54,37 @@ print(split_str("Hi there Sam !"))
  # my solution of task 3
 #------------------------------------------------
 def format(planet , diameter):
-     planetary_info = " The diameter of {} is {} kilometers."
-     info = planetary_info.format(planet,diameter)
+     planetary_info = "The diameter of {one} is {two} kilometers."
+     info = planetary_info.format(one=planet,two=diameter)
      return info
     
-print(format("Earth", 12742))
+
 #--------------------------------------------------
 
 #def indexing(lst):
+      #a = print("immutable")
+     # return a
     
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 
-    #return None
+    
 # my solution of task 4
 #---------------------------------------------------
 
 def indexing(lst):
-    a = print(lst[3][1][2][0])
-    return a
+      
+      a = lst[3][1][2][0]
+      
+      return a
 
-indexing(lst=[1,2,[3,4],[5,[100,200,['hello']],23,11],1,7])
+      
+   
+   
+    
+    
+
 #----------------------------------------------------
 #def dictionary(d):
     
@@ -82,23 +95,25 @@ indexing(lst=[1,2,[3,4],[5,[100,200,['hello']],23,11],1,7])
 # my solution of task 5
 #-----------------------------------------------------
 def dictionary(d):
-    d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+    
     info1 = d['k1']
     info2=info1[3]
     info3=info2['tricky']
     info4=info3[3]
     info5=info4['target']
     info6=info5[3]
-    result = print(info6)
-    return result 
+    return info6
+    
 
-dictionary( d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]})
+
 #----------------------------------------------------------
 def subjective():
+      reult = "immutable"
+      return reult
     
 # ** What is the main difference between a tuple and a list? **
-# Tuple is _______
-  return None
+# Tuple is _immutable______
+  
 # my answer of task 6
 #-------------------------------
 #tuple are immutable                                                           list are mutable
@@ -116,10 +131,11 @@ def subjective():
 # my solution to task 7
 #--------------------------------------------------------------------------------------------------------------
 def domainGet(email):
+
+    
     result = email.split('@')[1]
-    OUTPUT = print("output is : " + str(result))
-    return  OUTPUT
-domainGet('user@domain.com')
+    return str(result)
+    
 #------------------------------------------------------------------------------------------------------------------
 #def findDog(st):
     
@@ -131,9 +147,9 @@ domainGet('user@domain.com')
 def findDog(st):
     keyword = 'dog'
     if keyword in st:
-       output = print("true")
-       return output
-findDog('whose dog is this?')
+       return True
+       
+
 #------------------------------------------------------------------------------------------------------------------------
 #def countDog(st):
 
@@ -144,7 +160,6 @@ findDog('whose dog is this?')
 def countDog(st):
     times = st.count('dog')
     return times
-print( countDog('dog 1 barked at dog 2!'))
 #-----------------------------------------------------------------------------------------------------------------------------
 #def lambdafunc(seq):
     
@@ -159,11 +174,44 @@ print( countDog('dog 1 barked at dog 2!'))
 # my solution of task 10
 #-------------------------------------------------------------------------------------------------------------------------
 def lambdafunc(seq):
-    result=print( list(filter(lambda x: x.startswith("s"), seq)) )
-    return result
-lambdafunc(['soup','dog','salad','cat','great'])  
+    seq = ['soup','dog','salad','cat','great']
+    a=list(filter(lambda x: x.startswith("s"), seq)) 
+    return a
+    
+  
 #----------------------------------------------------------------------------------------------------------------------------
 def caught_speeding(speed, is_birthday):
+      if is_birthday == True:
+        if speed <= 65:
+           a ="No Ticket"
+           return a
+        elif speed <= 85:
+            a1 = "Small Ticket"
+            return a1
+        elif speed>= 86:
+           a2 = "Big Ticket"
+      else:        
+          if speed <= 60:
+             a ="No ticket"
+             return a
+          elif  speed <= 80:
+                  a1 = "Small Ticket"
+                  return a1
+          elif speed>= 81:
+              a2 = "Big Ticket"
+              return a2  
+      
+                
+           
+          
+        
+
+
+
+
+              
+
+            
     
     
 # **You are driving a little too fast, and a police officer stops you. Write a function
@@ -172,7 +220,7 @@ def caught_speeding(speed, is_birthday):
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
 
-    return None
+    
 
 
 ## Numpy Exercises
@@ -181,59 +229,92 @@ import numpy as np
 
 
 def create_arr_of_fives():
+      arr=np.ones(10)*5
+      return list(arr)
+
+      
+      
+      
     
   #### Create an array of 10 fives
   #### Convert your output into list 
   #### e.g return list(arr) 
 
-  return None
+  
 
 
 
 def even_num():
+      arr=np.arange(10,52,2)
+      return list(arr)
+
+    
     
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return None
+  
 
 
 
 def create_matrix():
+      arr=np.arange(0,9).reshape(3,3)
+      return arr.tolist()
+      
+  
     
   ### Create a 3x3 matrix with values ranging from 0 to 8
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
-  return None
+  
 
 
 
 def linear_space():
+      arr=np.linspace(0,1,20)
+      return list(arr)
+
     
   ### Create an array of 20 linearly spaced points between 0 and 1
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  return None
+  
 
 
 
 def decimal_mat():
+      arr=np.linspace(1,100,100).reshape(10,10)/100
+      return arr.tolist()
+
+      
+      
+      
+     
+
     
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
-  ### e.g return (arr).tolist()
-
-  return None
+  ### e.g return (arr)
 
 
 
 def slices_1():
+      arr = np.arange(1,26).reshape(5,5)[2:,1:]
+      return (arr).tolist()
+
+      
+      
+      
+
+      
+    
     
   # This is a given array
-  arr = np.arange(1,26).reshape(5,5)
+  
+  
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -247,14 +328,18 @@ def slices_1():
   #      [17, 18, 19, 20],
   #      [22, 23, 24, 25]])
 
-  return None
+  
 
 
 
 def slices_2():
+    arr = np.arange(1,26).reshape(5,5)[0:3,1:2]
+    return (arr).tolist()
+
+
     
   # This is a given array
-  arr = np.arange(1,26).reshape(5,5)
+
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -268,14 +353,16 @@ def slices_2():
   #      [ 7],
   #      [12]])
 
-  return None 
+  
 
 
 
 def slices_3():
-    
+      arr = np.arange(1,26).reshape(5,5)[3:]
+      return (arr).tolist()
+
   # This is a given array
-  arr = np.arange(1,26).reshape(5,5)
+  
   # array([[ 1,  2,  3,  4,  5],
   #      [ 6,  7,  8,  9, 10],
   #      [11, 12, 13, 14, 15],
@@ -288,7 +375,7 @@ def slices_3():
   # array([[16, 17, 18, 19, 20],
   #      [21, 22, 23, 24, 25]])
     
-  return None 
+  
 
 
 # Great job!
