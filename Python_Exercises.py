@@ -87,8 +87,7 @@ def domainGet(email):
 # **So for example, passing "user@domain.com" would return: domain.com**
 
     return email.split('@')
-dom = input("Enter your email website domain ")
-print(domainGet(dom)[1])
+print("user@domain.com".split('@')[1])
 
 
 
@@ -98,8 +97,7 @@ def findDog(st):
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
 
     return "dog" in st.lower().split()
-stat = input("Enter an input statement ")
-print(findDog(stat))
+print(findDog("What is the breed of this dog ?"))
 
 
 
@@ -112,8 +110,7 @@ def countDog(st):
         if word == 'dog':
             count = count+1
     return count
-stat = input("Enter an input statement ")
-print(countDog(stat))
+print(countDog("my dog can run faster than your dog"))
 
 
 
