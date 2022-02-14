@@ -144,8 +144,8 @@ def even_num():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
-  array=np.arange(10, 51, 2)
-    return list(array)
+  return list(np.arange(10, 51, 2))
+
 
 
 
