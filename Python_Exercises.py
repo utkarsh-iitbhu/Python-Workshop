@@ -8,6 +8,8 @@ def power(a,b):
     
     # ** What is 7 to the power of 4?**
     
+    print(a**b)
+    
     return None
 
 
@@ -19,6 +21,7 @@ def split_str(s):
 #     s = "Hi there Sam!"
 #     
 # **into a list. **
+    print(s.split())
 
     return None
 
@@ -34,6 +37,8 @@ def format(planet,diameter):
 # 
 #     The diameter of Earth is 12742 kilometers.
 
+    print("The diameter of {} is {} kilometers.".format(planet,diameter))
+
     return None
 
 
@@ -43,7 +48,8 @@ def indexing(lst):
 # ** Given this nested list, use indexing to grab the word "hello" **
 
 #lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
-
+    
+    print(lst[3][1][2][0])
     return None
 
 
@@ -53,15 +59,16 @@ def dictionary(d):
 
 # d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 
-
+    print(d['k1'][3]['tricky'][3]['target'][3])
     return None
 
 
 def subjective():
     
 # ** What is the main difference between a tuple and a list? **
-# Tuple is _______
-
+# Tuple is immutable while list is mutable.
+     
+    
     return None
 
 
@@ -75,20 +82,26 @@ def domainGet(email):
 #     
 # **So for example, passing "user@domain.com" would return: domain.com**
 
+    print(email.split("@")[1])
+
     return None
 
 
 def findDog(st):
     
 # ** Create a basic function that returns True if the word 'dog' is contained in the input string. Don't worry about edge cases like a punctuation being attached to the word dog, but do account for capitalization. **
-
+    
+   if " dog " in st:
+     print("True")
+        
     return None
 
 
 def countDog(st):
 
 # ** Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases. **
-
+    c=0
+    
     return None
 
 
@@ -103,6 +116,9 @@ def lambdafunc(seq):
 # 
 #     ['soup','salad']
 
+    
+    print(list(filter(lambda item: item[0]=="S" or item[0]=="s",seq)))
+
     return None
 
 
@@ -114,6 +130,21 @@ def caught_speeding(speed, is_birthday):
 #   If your speed is 60 or less, the result is "No Ticket". If speed is between 61 
 #   and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big    Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all 
 #   cases. **
+
+    if is_birthday==True:
+      if speed>=86:
+        print("Big Ticket")
+      elif speed>=66:
+        print("Small Ticket")  
+      else:
+        print("No Ticket")  
+    else:
+      if speed>=81:
+        print("Big Ticket")
+      elif speed>=61:
+        print("Small Ticket")  
+      else:
+        print("No Ticket") 
 
     return None
 
@@ -129,6 +160,9 @@ def create_arr_of_fives():
   #### Convert your output into list 
   #### e.g return list(arr) 
 
+  arr=np.random.randint(5,6,10)
+  print(list(arr))
+
   return None
 
 
@@ -138,6 +172,9 @@ def even_num():
   ### Create an array of all the even integers from 10 to 50
   ### Convert your output into list 
   ### e.g return list(arr) 
+
+  arr=np.arange(10,51,2)
+  print(list(arr))
 
   return None
 
@@ -149,6 +186,10 @@ def create_matrix():
   ### Convert your output into list 
   ### e.g return (arr).tolist()
 
+  matrix=np.arange(9)
+  matrix2=np.array(matrix.reshape(3,3))
+  print(matrix2)
+  print(matrix2.tolist())  
   return None
 
 
@@ -159,6 +200,9 @@ def linear_space():
   ### Convert your output into list 
   ### e.g return list(arr) 
 
+  arr=np.linspace(0,1,20)
+  print(list(arr))
+
   return None
 
 
@@ -168,6 +212,11 @@ def decimal_mat():
   ### Create an array of size 10*10 consisting of numbers from 0.01 to 1
   ### Convert your output into list 
   ### e.g return (arr).tolist()
+
+  arr=np.random.rand(0.01,1,100)
+  arr2=np.array(arr.reshape(10,10))
+  print(arr2)
+  print(arr2.tolist())
 
   return None
 
